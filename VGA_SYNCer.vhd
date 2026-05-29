@@ -1,4 +1,5 @@
 -- VGA Synchronization Generator
+-- This script is the shell code for ENGS 31 final project, WHACK-A-MOLE
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
@@ -20,6 +21,7 @@ signal pixel_x_out, pixel_y_out : integer := 0;
 signal H_video_on : STD_LOGIC := '0';
 signal V_video_on : STD_LOGIC := '0';
 --Add your signals here
+
 signal PCLK, PCLK_toggle: STD_LOGIC := '0';
 signal clk_cnt: unsigned(3 downto 0)  := (others=>'0');
 signal PCLK_cntr : integer := 0;
