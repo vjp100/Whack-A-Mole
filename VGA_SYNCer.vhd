@@ -31,17 +31,17 @@ signal vsync : std_logic := '0';
 signal vlines : integer := 0;
 --VGA Constants (taken directly from VGA Class Notes)
 
-constant left_border : integer := 2;--48 | used 2 for sim w/ vertical
-constant h_display : integer := 20;--640 | used 20 for sum w/ vertical
-constant right_border : integer := 2;--16| used 2 for sim w/vertical
-constant h_retrace : integer := 4;--96	 | used 4 for sim  w/ vertical
+constant left_border : integer := 48;--48 | used 2 for sim w/ vertical
+constant h_display : integer := 640;--640 | used 20 for sum w/ vertical
+constant right_border : integer := 16;--16| used 2 for sim w/vertical
+constant h_retrace : integer := 96;--96	 | used 4 for sim  w/ vertical
 constant HSCAN : integer := left_border + h_display + right_border + h_retrace - 1; --number of PCLKs in an H_sync period
 
 
-constant top_border : integer := 3;--29
-constant v_display : integer := 15;---480
-constant bottom_border : integer := 2;--10
-constant v_retrace : integer := 5;--2
+constant top_border : integer := 29;--29
+constant v_display : integer := 480;---480
+constant bottom_border : integer := 10;--10
+constant v_retrace : integer := 2;--2
 constant VSCAN : integer := top_border + v_display + bottom_border + v_retrace - 1; --number of H_syncs in an V_sync period
 BEGIN
 
