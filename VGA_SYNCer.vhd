@@ -9,8 +9,8 @@ PORT ( 	clk		:	in	STD_LOGIC; --100 MHz clock
 		V_sync	: 	out	STD_LOGIC;
 		H_sync	: 	out	STD_LOGIC;
         video_on:	out	STD_LOGIC;
-		pixel_x	:	out	STD_LOGIC;
-        pixel_y	:	out	STD_LOGIC);
+		pixel_x	:	out	STD_LOGIC_vector(9 downto 0);
+        pixel_y	:	out	STD_LOGIC_vector(9 downto 0));
 end VGA;
 
 
@@ -50,7 +50,7 @@ BEGIN
 PCLK_toggle_func : process(clk)
 begin
 	if rising_edge(clK) then
-    	if clk_cnt + 1 < 4 then
+    	if clk_cnt + 1 < 2 then
 			clk_cnt<=clk_cnt+1;
         else 
         	clk_cnt<= (others=>'0');
@@ -67,21 +67,23 @@ begin
     --put your PCLK generation code here
     	if PCLK_toggle = '1' then
         	PCLK <= '1';
-            prevPCLK <= '0';
+            prevPCLK <= PCLK;
         else 
         	PCLK<='0';
-            prevPCLK <= '1';
+            prevPCLK <= PCLK;
         end if;
     end if;
 end process PCLK_proc;
 
-PCLK_cnt_func : process(PCLK)
+PCLK_cnt_func : process(clk,PCLK)
 begin
-	if rising_edge(PCLK) then
-    	if PCLK_cntr + 1 <=HSCAN then
-    		PCLK_cntr <= PCLK_cntr + 1;
-		else 
-        	PCLK_cntr <= 0;
+	if rising_edge(clk) then
+        if PCLK = '1' and prevPCLK = '0' then
+        	if PCLK_cntr + 1 <=HSCAN then
+        		PCLK_cntr <= PCLK_cntr + 1;
+            else 
+                PCLK_cntr <= 0;
+            end if;
         end if;
     end if;
 end process PCLK_cnt_func;
@@ -153,11 +155,17 @@ end process Vsync_proc;
 
 
 
-pixel_x_out<=PCLK_cntr - left_border when video_on='1' else 0;
-pixel_y_out<=vlines - top_border when video_on='1' else 0;
+pixel_x_out<=PCLK_cntr - left_border when (H_video_on AND V_video_on)='1' else 0;
+pixel_y_out<=vlines - top_border when (H_video_on AND V_video_on)='1' else 0;
 
+--==========================================================
+--                      OUTPUTS
+--==========================================================
+pixel_x<=std_logic_vector(to_unsigned(pixel_x_out, 10));
+pixel_y<= std_logic_vector(to_unsigned(pixel_y_out, 10));
 video_on <= H_video_on AND V_video_on; --Only enable video out when H_video_out and V_video_out are high. It's important to set the output to zero when you aren't actively displaying video. That's how the monitor determines the black level.
-
+v_sync <= vsync;
+H_sync <= hsync;
 end behavior;
         
         
