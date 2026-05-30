@@ -23,7 +23,7 @@ signal V_video_on : STD_LOGIC := '0';
 --Add your signals here
 
 signal PCLK, PCLK_toggle: STD_LOGIC := '0';
-signal clk_cnt: unsigned(3 downto 0)  := (others=>'0');
+signal clk_cnt: integer  := 0;
 signal PCLK_cntr : integer := 0;
 signal prevPCLK : std_logic:='0';
 signal hsync : std_logic := '0';
@@ -53,7 +53,7 @@ begin
     	if clk_cnt + 1 < 2 then
 			clk_cnt<=clk_cnt+1;
         else 
-        	clk_cnt<= (others=>'0');
+        	clk_cnt<= 0;
             PCLK_toggle <= not PCLK_toggle;
         end if;
     end if;
@@ -75,11 +75,11 @@ begin
     end if;
 end process PCLK_proc;
 
-PCLK_cnt_func : process(clk,PCLK)
+PCLK_cnt_func : process(clk)
 begin
 	if rising_edge(clk) then
-        if PCLK = '1' and prevPCLK = '0' then
-        	if PCLK_cntr + 1 <=HSCAN then
+        if (PCLK = '1' ) and (clk_cnt = 0) then
+        	if PCLK_cntr  < HSCAN then
         		PCLK_cntr <= PCLK_cntr + 1;
             else 
                 PCLK_cntr <= 0;
@@ -118,7 +118,7 @@ begin
 			if hsync_old = '0' and hsync = '1' then
 --        	hsync_clk <='1';
 			
-              if vlines + 1 <= VSCAN then
+              if vlines  < VSCAN then
                   vlines<=vlines+1;
               else
                   vlines<=0;
@@ -137,7 +137,7 @@ begin
        --V_sync and V_video_on generation code goes here
        		if hsync_old = '0' and hsync = '1' then
 --            if hsync_clk = '1' then
-            	if (vlines <=  top_border + v_display + bottom_border) or (vlines >= VSCAN ) then
+            	if (vlines <=  top_border + v_display + bottom_border) or (vlines >= top_border + v_display + bottom_border + v_retrace  ) then
                 	vsync<='1';
                 else 
                 	vsync<='0';
