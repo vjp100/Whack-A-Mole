@@ -1,2 +1,14 @@
 # Whack-A-Mole
 Engs 31 final project. Team members: Alisha Qureshi, Mazvita Nhidza, Vishal Powell 
+
+## Update 30/5/26 : 12:22am
+
+I think I have the VGA sync working. The test code seems to be working correctly. Tad mentioned that I should probably add some sort of MUX right before when we have the gameplay module so that if we mess up the display we can check if we ruined the VGA or just the drawing logic.
+
+---
+
+### To DO:
+    I think I'll either finish debouncing and working on joystick logic tonight (probaly not gonna happen lowk) or tomorrow morning. It's SPI and idr how to do that lol.
+
+
+
