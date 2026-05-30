@@ -12,8 +12,8 @@ PORT ( 	clk		:	in	STD_LOGIC; --100 MHz clock
 		V_sync	: 	out	STD_LOGIC;
 		H_sync	: 	out	STD_LOGIC;
         video_on:	out	STD_LOGIC;
-		pixel_x	:	out	STD_LOGIC;
-        pixel_y	:	out	STD_LOGIC);
+		pixel_x	:	out std_logic_vector (9 downto 0);
+        pixel_y	:	out	std_logic_vector (9 downto 0));
 end component;
 
 
@@ -22,8 +22,8 @@ signal 	clk		:	STD_LOGIC; --100 MHz clock
 signal	V_sync	: 	STD_LOGIC;
 signal	H_sync	: 	STD_LOGIC;
 signal	video_on:	STD_LOGIC;
-signal	pixel_x	:	STD_LOGIC;
-signal	pixel_y	:	STD_LOGIC;
+signal	pixel_x	:	std_logic_vector (9 downto 0);
+signal	pixel_y	:	std_logic_vector (9 downto 0);
 
 
 begin
