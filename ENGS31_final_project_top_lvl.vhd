@@ -24,9 +24,9 @@ entity VGA_top_lvl is
         vsync               : out std_logic;
         red                 : out std_logic_vector(3 downto 0);
         green               : out std_logic_vector(3 downto 0);
-        blue                : out std_logic_vector(3 downto 0);
+        blue                : out std_logic_vector(3 downto 0));
         
-    ) end VGA_top_lvl;
+     end VGA_top_lvl;
 
 --===========================================================
 --Architecture + Component Declarations
@@ -56,7 +56,7 @@ architecture Behavioral of VGA_top_lvl is
             row,column			: in std_logic_vector(9 downto 0);
             color				: out std_logic_vector(11 downto 0));
 
-    end vga_test_pattern;
+    end component ;
 
     --=======================================================
     -- Internal signals
