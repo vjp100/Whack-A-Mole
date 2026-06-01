@@ -8,8 +8,10 @@ I think I have the VGA sync working. The test code seems to be working correctly
 ---
 
 ### To DO:
+#### REMOVE `PCLK_CNRT` or `PCLK` and use normal clk for VGA. We're generating a 25mhz clock instead of dividing.
 * I think I'll either finish debouncing and working on joystick logic tonight (probaly not gonna happen lowk) or tomorrow morning. It's SPI and idr how to do that lol.
 * ADD SYSTEM_CLOCK_GENERATOR and tick_generator to vivado project and instanciate the different clocks...?
+
 
 
 
