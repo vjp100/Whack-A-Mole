@@ -13,8 +13,8 @@ Port (
     
     -- inputs
     start_pressed   : in std_logic;
-    whack_pressed   : i std_logic;
-    misses          : in std_logic_vector(3 downto 0);
+    whack_pressed   : in std_logic;
+    misses          : in std_logic_vector(1 downto 0);
     
     -- outputs 
     whacked         : out std_logic;
@@ -60,7 +60,7 @@ begin
                 next_state <= WHACK;
             end if;
             
-            if misses = "3" then    
+            if misses = "11" then    
                 next_state <= GAME_OVER;
             end if;
             

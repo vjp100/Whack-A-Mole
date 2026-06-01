@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_whack_game_behav/xsimk.exe -simmode gui -wdb tb_whack_game_behav.wdb -simrunnum 0 -socket 55376
+Design successfully loaded
+Design Loading Memory Usage: 10712 KB (Peak: 10712 KB)
+Design Loading CPU Usage: 62 ms
+Simulation completed
+Simulation Memory Usage: 11272 KB (Peak: 11272 KB)
+Simulation CPU Usage: 93 ms

@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../WhackAMole.srcs/sources_1/new/hammer_move.vhd" \
+"../../../../WhackAMole.srcs/sources_1/new/mole_generator.vhd" \
+"../../../../WhackAMole.srcs/sources_1/new/score.vhd" \
+"../../../../WhackAMole.srcs/sources_1/new/whacked_clock.vhd" \
+"../../../../WhackAMole.srcs/sources_1/new/whack_fsm.vhd" \
+"../../../../WhackAMole.srcs/sources_1/new/top_level_whack.vhd" \
+"../../../../WhackAMole.srcs/sim_1/new/test1.vhd" \
+"../../../../WhackAMole.srcs/sim_1/new/test2.vhd" \
+
+# Do not sort compile order
+nosort

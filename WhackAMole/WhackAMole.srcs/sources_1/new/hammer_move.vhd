@@ -36,16 +36,16 @@ process(clk_port)
 begin 
     if rising_edge(clk_port) then
         if game_on = '1' then
-            if right = '1' and hcol < "2" then
+            if right = '1' and hcol < "10" then
                 hcol <= hcol + 1;
             
-            elsif left = '1' and hcol > "0" then
+            elsif left = '1' and hcol > "00" then
                 hcol <= hcol - 1;
                 
-            elsif down = '1' and hrow < "2" then
+            elsif down = '1' and hrow < "10" then
                 hrow <= hrow + 1;
                 
-            elsif up = '1' and hrow > "0" then
+            elsif up = '1' and hrow > "00" then
                 hrow <= hrow - 1;
             end if;
         end if;

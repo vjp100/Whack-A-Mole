@@ -1,0 +1,12 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+O:/E31_S26/WhackAMole/WhackAMole.srcs/sim_1/new/test1.vhd,1780286595,vhdl,,,,tb_whack_game,,,,,,,,
+O:/E31_S26/WhackAMole/WhackAMole.srcs/sim_1/new/test2.vhd,1780287508,vhdl,,,,tb_mole_generator,,,,,,,,
+O:/E31_S26/WhackAMole/WhackAMole.srcs/sources_1/new/hammer_move.vhd,1780287638,vhdl,O:/E31_S26/WhackAMole/WhackAMole.srcs/sources_1/new/top_level_whack.vhd,,,hammer_move,,,,,,,,
+O:/E31_S26/WhackAMole/WhackAMole.srcs/sources_1/new/mole_generator.vhd,1780287540,vhdl,O:/E31_S26/WhackAMole/WhackAMole.srcs/sim_1/new/test1.vhd;O:/E31_S26/WhackAMole/WhackAMole.srcs/sim_1/new/test2.vhd;O:/E31_S26/WhackAMole/WhackAMole.srcs/sources_1/new/top_level_whack.vhd,,,mole_generator,,,,,,,,
+O:/E31_S26/WhackAMole/WhackAMole.srcs/sources_1/new/score.vhd,1780116149,vhdl,O:/E31_S26/WhackAMole/WhackAMole.srcs/sim_1/new/test1.vhd;O:/E31_S26/WhackAMole/WhackAMole.srcs/sources_1/new/top_level_whack.vhd,,,score_counter,,,,,,,,
+O:/E31_S26/WhackAMole/WhackAMole.srcs/sources_1/new/top_level_whack.vhd,1780285954,vhdl,,,,whack_a_mole_top,,,,,,,,
+O:/E31_S26/WhackAMole/WhackAMole.srcs/sources_1/new/whack_fsm.vhd,1780285954,vhdl,O:/E31_S26/WhackAMole/WhackAMole.srcs/sim_1/new/test1.vhd;O:/E31_S26/WhackAMole/WhackAMole.srcs/sources_1/new/top_level_whack.vhd,,,whack_fsm,,,,,,,,
+O:/E31_S26/WhackAMole/WhackAMole.srcs/sources_1/new/whacked_clock.vhd,1780111518,vhdl,O:/E31_S26/WhackAMole/WhackAMole.srcs/sources_1/new/top_level_whack.vhd,,,system_clock_generation,,,,,,,,
