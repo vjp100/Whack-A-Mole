@@ -16,6 +16,8 @@ anyways either shift specifically to the registers then format them into only on
 * ~I think I'll either finish debouncing and working on joystick logic tonight (probaly not gonna happen lowk) or tomorrow morning. It's SPI and idr how to do that lol.~
 
 * ADD SYSTEM_CLOCK_GENERATOR and tick_generator to vivado project and instanciate the different clocks...?
+* MAke SCKL signal
+* Create a Take sample signal in top lvl that takes a sample every however long (maybe ever ms)
 
 Old Updates:
 ---

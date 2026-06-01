@@ -57,6 +57,11 @@ signal shift_buttons_enable	: std_logic := '0';
 signal load_enable		: std_logic := '0';
 signal delay_enable		: std_logic := '0';
 signal shift_reg	    : std_logic_vector(39 downto 0) := (others => '0');
+signal x_1_reg           : std_logic_vector(7 downto 0) := (others => '0');
+signal y_1_reg           : std_logic_vector(7 downto 0) := (others => '0');
+signal x_2_reg           : std_logic_vector(7 downto 0) := (others => '0');
+signal y_2_reg           : std_logic_vector(7 downto 0) := (others => '0');
+signal temp_buttons_reg       : std_logic_vector(7 downto 0) := (others => '0');
 signal x_axis_reg       : std_logic_vector(9 downto 0) := (others => '0');
 signal y_axis_reg       : std_logic_vector(9 downto 0) := (others => '0');
 signal button_reg       : std_logic_vector(2 downto 0) := (others => '0');
@@ -90,12 +95,20 @@ begin
     end if;
 end process clk_divider;
 
+-- make another process to have a 50-ish% duty signal that i connect to SCKL
+
 take_sample_sync: process(clk_port)
 begin
     if rising_edge(clk_port) then
-        take_sample <= take_sample_port;
+        take_sample <= take_sample_port or take_sample;
     end if;
 end process take_sample_sync;
+
+take_sample : process()
+begin
+    if delay_tc = '1' and current_state = IDLE then
+        take_sample <= '1';
+    end if;
 --=============================================================
 --+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 --State Update:
@@ -256,29 +269,59 @@ end process fifteen_us_delay;
 --=============================================================
 --Datapath:
 --=============================================================
-shift_x1_process: process(clk_port)
+shift_x1_process: process(clk_port, clk_divider_tc)
 begin
     if rising_edge(clk_port) then
         if clk_divider_tc = '1' then
-            if shift_enable = '1' then
-                shift_reg <= shift_reg(7 downto 0) & spi_s_data_port;
+            if shift_x1_enable = '1' then
+                x_1_reg <=spi_s_data_port;
             end if;
         end if;
     end if;
 end process shift_x1_process;
 
-shift_x2_process: process(clk_port)
+shift_x2_process: process(clk_port, clk_divider_tc)
 begin
     if rising_edge(clk_port) then
         if clk_divider_tc = '1' then
-            if shift_enable = '1' then
-                shift_reg <= shift_reg(15 downto 0) & spi_s_data_port;
+            if shift_x2_enable = '1' then
+                 x_2_reg <= spi_s_data_port;
             end if;
         end if;
     end if;
 end process shift_x2_process;
 
+shift_y1_process: process(clk_port, clk_divider_tc)
+begin
+    if rising_edge(clk_port) then
+        if clk_divider_tc = '1' then
+            if shift_y1_enable = '1' then
+                y_1_reg <= spi_s_data_port;
+            end if;
+        end if;
+    end if;
+end process shift_y1_process;
 
+shift_y2_process: process(clk_port, clk_divider_tc)
+begin
+    if rising_edge(clk_port) then
+        if clk_divider_tc = '1' then
+            if shift_y2_enable = '1' then
+                y_2_reg <= spi_s_data_port;
+            end if;
+        end if;
+    end if;
+end process shift_y2_process;
 
+shift_buttons_process: process(clk_port, clk_divider_tc)
+begin
+    if rising_edge(clk_port) then
+        if clk_divider_tc = '1' then
+            if shift_buttons_enable = '1' then
+                temp_buttons_reg <= spi_s_data_port;
+            end if;
+        end if;
+    end if;
+end process shift_buttons_process;
 
 end Behavioral; 
