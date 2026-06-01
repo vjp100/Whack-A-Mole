@@ -13,6 +13,34 @@ Lowk should be close to being done. need to make a testbench to work with the fi
 * MAke SCKL signal
 * Create a Take sample signal in top lvl that takes a sample every however long (maybe ever ms)
 
+#### For mid sample:
+
+```
+signal sampled_bit : std_logic := '0';
+constant SAMPLE_POINT : integer := 18;  -- mid high-phase (SCLK high is cntr 11-24)
+
+sample_capture: process(clk_port)
+begin
+    if rising_edge(clk_port) then
+        if clk_divider_cntr = SAMPLE_POINT then
+            sampled_bit <= spi_s_data_port;
+        end if;
+    end if;
+end process sample_capture;
+```
+    also change `shift_reg... &spi...` to `shift_reg <= shift_reg(38 downto 0) & sampled_bit;   -- was spi_s_data_port`
+
+Claude also recommended changing `entity JoyStick`:
+
+```
+entity Joystick is
+    generic (DELAY_COUNT : integer := 375);   -- default for synthesis
+    port( ... );
+```
+and delete the CONSTANT DELAY_COUNT : integer := 375; line from the architecture.
+
+Cuz it'll be "long to sim with the actual time" or smtn idk
+
 Old Updates:
 ---
 ## Update 1/6/26 : 1:46am
@@ -31,6 +59,7 @@ I think I have the VGA sync working. The test code seems to be working correctly
 
 
 ---
+
 
 
 
