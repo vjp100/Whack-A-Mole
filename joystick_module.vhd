@@ -37,7 +37,7 @@ entity JoyStick is
         left_move                  : out std_logic;
         up                         : out std_logic;
         down                       : out std_logic;
-
+        spi_sclk                   : out std_logic;
         button_port                : out std_logic_vector(2 downto 0));
 end JoyStick; 
 
@@ -48,34 +48,38 @@ architecture Behavioral of JoyStick is
 --=============================================================
 --Local Signal Declaration
 --=============================================================
-signal take_sample      : std_logic := '0';
-signal shift_x1_enable		: std_logic := '0';
-signal shift_y1_enable		: std_logic := '0';
-signal shift_x2_enable		: std_logic := '0';
-signal shift_y2_enable		: std_logic := '0';
-signal shift_buttons_enable	: std_logic := '0';
-signal load_enable		: std_logic := '0';
-signal delay_enable		: std_logic := '0';
-signal shift_reg	    : std_logic_vector(39 downto 0) := (others => '0');
-signal x_1_reg           : std_logic_vector(7 downto 0) := (others => '0');
-signal y_1_reg           : std_logic_vector(7 downto 0) := (others => '0');
-signal x_2_reg           : std_logic_vector(7 downto 0) := (others => '0');
-signal y_2_reg           : std_logic_vector(7 downto 0) := (others => '0');
-signal temp_buttons_reg       : std_logic_vector(7 downto 0) := (others => '0');
-signal x_axis_reg       : std_logic_vector(9 downto 0) := (others => '0');
-signal y_axis_reg       : std_logic_vector(9 downto 0) := (others => '0');
-signal button_reg       : std_logic_vector(2 downto 0) := (others => '0');
-signal clk_divider_cntr : integer := 0;
+signal take_sample          : std_logic := '0';
+-- signal shift_x1_enable		: std_logic := '0';
+-- signal shift_y1_enable		: std_logic := '0';
+-- signal shift_x2_enable		: std_logic := '0';
+-- signal shift_y2_enable		: std_logic := '0';
+-- signal shift_buttons_enable	: std_logic := '0';
+signal load_enable		    : std_logic := '0';
+signal delay_enable		    : std_logic := '0';
+signal shift_reg	        : std_logic_vector(39 downto 0) := (others => '0');
+-- signal x_1_reg              : std_logic_vector(7 downto 0) := (others => '0');
+-- signal y_1_reg              : std_logic_vector(7 downto 0) := (others => '0');
+-- signal x_2_reg              : std_logic_vector(7 downto 0) := (others => '0');
+-- signal y_2_reg              : std_logic_vector(7 downto 0) := (others => '0');
+-- signal temp_buttons_reg     : std_logic_vector(7 downto 0) := (others => '0');
+signal x_axis_reg           : std_logic_vector(9 downto 0) := (others => '0');
+signal y_axis_reg           : std_logic_vector(9 downto 0) := (others => '0');
+signal button_reg           : std_logic_vector(2 downto 0) := (others => '0');
+signal clk_divider_cntr     : integer := 0;
 signal clk_divider_tc   : std_logic := '0';	-- terminal count for clock divider
 signal delay_cntr    : integer := 0;
 signal delay_tc      : std_logic := '0';	-- terminal count for SS delay
 signal bit_count		: integer := 0;
 signal bit_tc			: std_logic := '0';	-- terminal count for bit counter
+signal shift_cntr      : integer := 0;
+signal shift_tc       : std_logic := '0';	-- terminal count for number of shifts
+signal spi_sclk       : std_logic := '0';
 
 CONSTANT
     DELAY_COUNT : integer := 375; -- 15us delay at 25MHz clock per spec
-    N_BITS : integer := 40; -- Number of bits to shift in (5 bytes)
-type state_type is (IDLE, SHIFT_X1, SHIFT_Y1, SHIFT_X2, SHIFT_Y2, , SHIFT_BUTTONS, LOAD_x1, LOAD_y1, LOAD_x2, LOAD_y2, LOAD_BUTTONS);
+    N_BITS : integer := 8; -- Number of bits to shift in
+    N_SHIFTS : integer := 5; -- Number of shifts to perform (5 bytes)
+type state_type is (IDLE, SHIFT, DONE, SS_DELAY, DELAY, PARSE);
 signal current_state, next_state : state_type := IDLE;
 
 begin
@@ -97,6 +101,15 @@ end process clk_divider;
 
 -- make another process to have a 50-ish% duty signal that i connect to SCKL
 
+SCLK_generator: process(clk_port)
+begin
+    if rising_edge(clk_port) then
+        if clk_divider_tc = '1' then
+            spi_sclk <= not spi_sclk;
+        end if;
+    end if;
+end process SCLK_generator;
+
 take_sample_sync: process(clk_port)
 begin
     if rising_edge(clk_port) then
@@ -104,11 +117,6 @@ begin
     end if;
 end process take_sample_sync;
 
-take_sample : process()
-begin
-    if delay_tc = '1' and current_state = IDLE then
-        take_sample <= '1';
-    end if;
 --=============================================================
 --+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 --State Update:
@@ -131,50 +139,30 @@ next_state_process: process(current_state, take_sample, bit_tc, delay_tc)
 begin
     next_state <= current_state;	-- default state is to hold
     case current_state is
+        
         when IDLE =>
             if take_sample = '1' then 
-                if delay_tc = '1' then
-                    next_state <= SHIFT_X1;
-                end if;
+                next_state <= SS_DELAY;
             end if;
-        when SHIFT_X1 =>
-            if bit_tc = '1' then 
-                next_state <= LOAD_x1;
-            end if;
-        when LOAD_x1 =>
+        when SS_DELAY =>
             if delay_tc = '1' then
-                next_state <= SHIFT_Y1;
+                next_state <= SHIFT;
             end if;
-        when SHIFT_Y1 =>
-            if bit_tc = '1' then 
-                next_state <= LOAD_y1;
+        when SHIFT =>
+            if bit_tc = '1' and N_SHIFT_TC = '0' then 
+                next_state <= DELAY;
+            elsif bit_tc = '1' and N_SHIFT_TC = '1' then
+                next_state <= PARSE;
             end if;
-        when LOAD_y1 =>
+        when DELAY =>
             if delay_tc = '1' then
-                next_state <= SHIFT_X2;
+                next_state <= SHIFT;
             end if;
-        when SHIFT_X2 =>
-            if bit_tc = '1' then 
-                next_state <= LOAD_x2;
-            end if;
-        when LOAD_x2 =>
-            if delay_tc = '1' then
-                next_state <= SHIFT_Y2;
-            end if;
-        when SHIFT_Y2 =>
-            if bit_tc = '1' then 
-                next_state <= LOAD_y2;
-            end if;
-        when LOAD_y2 =>
-            if delay_tc = '1' then
-                next_state <= SHIFT_BUTTONS;
-            end if;
-        when SHIFT_BUTTONS =>
-            if bit_tc = '1' then 
-                next_state <= LOAD_BUTTONS;
-            end if;
-        when LOAD_BUTTONS =>
+        when PARSE =>
+            next_state <= DONE;
+        when DONE =>
             next_state <= IDLE;
+        when others => null;
     end case;
 end process next_state_process;
 --+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -191,32 +179,17 @@ begin
     case current_state is
         when IDLE =>
             spi_cs_port <= '1';		-- active low
+        when SS_DELAY =>
             delay_enable <= '1';
-        when SHIFT_X1 =>
+        when SHIFT =>
             shift_enable <= '1';
             spi_cs_port <= '0';		-- active low
-        when LOAD_x1 =>
-            load_enable <= '1';
+        when DELAY =>
             delay_enable <= '1';
-        when SHIFT_Y1 =>
-            shift_enable <= '1';
-            spi_cs_port <= '0';		-- active low
-        when LOAD_y1 =>
+        when PARSE =>
             load_enable <= '1';
-            delay_enable <= '1';
-        when SHIFT_X2 =>
-            shift_enable <= '1';
-            spi_cs_port <= '0';		-- active low
-        when LOAD_x2 =>
-            load_enable <= '1';
-            delay_enable <= '1';
-        when SHIFT_Y2 =>
-            shift_enable <= '1';
-            spi_cs_port <= '0';		-- active low
-        when LOAD_y2 =>
-            load_enable <= '1';
-        when LOAD_BUTTONS =>
-            load_enable <= '1';
+        when DONE =>
+            null;
         when others => null;
     end case;
 end process Output_process;
@@ -225,33 +198,13 @@ end process Output_process;
 --Timer Sub-routines:
 --+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-bit_counter: process(clk_port)
-begin
-    if rising_edge(clk_port) then
-        if clk_divider_tc = '1' then
-            if shift_enable = '1' then
-                if bit_count = N_BITS - 1 then
-                    bit_count <= 0;
-                    bit_tc <= '1';
-                else
-                    bit_count <= bit_count + 1;
-                    bit_tc <= '0';
-                end if;
-            else
-                bit_count <= 0;
-                bit_tc <= '0';
-            end if;
-        end if;
-    end if;
-end process bit_counter;
-
-fifteen_us_delay: process(clk_port)
+fifteen_us_delay: process(clk_port, delay_enable, clk_divider_tc)
 begin
     -- Implementation for 15 microsecond delay
     if rising_edge(clk_port) then
         if clk_divider_tc = '1' then
             if delay_enable = '1' then
-                if delay_cntr < DELAY_COUNT then
+                if delay_cntr < DELAY_COUNT-1 then
                     delay_cntr <= delay_cntr + 1;
                     delay_tc <= '0';
                 else
@@ -269,59 +222,53 @@ end process fifteen_us_delay;
 --=============================================================
 --Datapath:
 --=============================================================
-shift_x1_process: process(clk_port, clk_divider_tc)
+
+shift_register: process(clk_port,shift_enable,bit_tc,clk_divider_tc)
 begin
     if rising_edge(clk_port) then
         if clk_divider_tc = '1' then
-            if shift_x1_enable = '1' then
-                x_1_reg <=spi_s_data_port;
+            if shift_enable = '1'  and bit_tc = '0' then
+                shift_reg <= shift_reg(38 downto 0) & spi_s_data_port;
+                if bit_count + 1 = N_BITS then
+                    bit_count <= 0;
+                    bit_tc <= '1';
+                else
+                    bit_count <= bit_count + 1;
+                    bit_tc <= '0';
+                end if;
+                if shift_cntr + 1 = N_SHIFTS then
+                    shift_cntr <= 0;
+                    shift_tc <= '1';
+                else
+                    shift_cntr <= shift_cntr + 1;
+                    shift_tc <= '0';
+                end if;
             end if;
         end if;
     end if;
-end process shift_x1_process;
+end process shift_register;
 
-shift_x2_process: process(clk_port, clk_divider_tc)
+Parse_process: process(clk_port,load_enable,clk_divider_tc)
 begin
     if rising_edge(clk_port) then
         if clk_divider_tc = '1' then
-            if shift_x2_enable = '1' then
-                 x_2_reg <= spi_s_data_port;
+            if load_enable = '1' then
+                x_axis_reg <= shift_reg(25 downto 24) & shift_reg(39 downto 32); -- concatenating the two nibbles for x.
+                y_axis_reg <= shift_reg(23 downto 16) & (shift_reg(9 downto 8)); -- concatenating the two nibbles for y.
+                button_reg <= shift_reg(2 downto 0); -- the last 3 bits are the buttons and Joystick moved.
             end if;
         end if;
     end if;
-end process shift_x2_process;
+end process Parse_process;
 
-shift_y1_process: process(clk_port, clk_divider_tc)
+Handle_outputs: process(x_axis_reg, y_axis_reg, button_reg)
 begin
-    if rising_edge(clk_port) then
-        if clk_divider_tc = '1' then
-            if shift_y1_enable = '1' then
-                y_1_reg <= spi_s_data_port;
-            end if;
-        end if;
-    end if;
-end process shift_y1_process;
-
-shift_y2_process: process(clk_port, clk_divider_tc)
-begin
-    if rising_edge(clk_port) then
-        if clk_divider_tc = '1' then
-            if shift_y2_enable = '1' then
-                y_2_reg <= spi_s_data_port;
-            end if;
-        end if;
-    end if;
-end process shift_y2_process;
-
-shift_buttons_process: process(clk_port, clk_divider_tc)
-begin
-    if rising_edge(clk_port) then
-        if clk_divider_tc = '1' then
-            if shift_buttons_enable = '1' then
-                temp_buttons_reg <= spi_s_data_port;
-            end if;
-        end if;
-    end if;
-end process shift_buttons_process;
-
+    x_axis_port <= x_axis_reg;
+    y_axis_port <= y_axis_reg;
+    button_port <= button_reg;
+    right_move <= '1' when x_axis_reg > "1000000000" else '0'; -- if x is greater than 512, we're moving right.
+    left_move <= '1' when x_axis_reg < "0111111111" else '0'; -- if x is less than 511, we're moving left.
+    up <= '1' when y_axis_reg > "1000000000" else '0'; -- if y is greater than 512, we're moving up.
+    down <= '1' when y_axis_reg < "0111111111" else '0'; -- if y is less than 511, we're moving down.
+end process Handle_outputs;
 end Behavioral; 
