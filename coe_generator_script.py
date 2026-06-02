@@ -27,18 +27,16 @@ def generate_coe(image_path, output_path, rom_width, rom_height):
         b_4bit = convert_to_4bit(b)
 
         val_12bit = f"{r_4bit:04b}{g_4bit:04b}{b_4bit:04b}"
-        hex_values.append(f"{int(val_12bit, 2):03X}\n")
+        hex_values.append(f"{int(val_12bit, 2):03X}")
 
-    # WRITING TO vhdl HEX FILE
+    with open(output_path, 'w') as f:
+        f.write("memory_initialization_radix=16;\n")
+        f.write("memory_initialization_vector=\n")
 
-    f = open(output_path, 'w')
-    f.write("memory_initialization_radix=16;\n")
-    f.write("memory_initialization_vector=\n")
+        for value in hex_values[:-1]:
+            f.write(value + ",\n")
 
-    for value in hex_values[:-1]:
-        f.write(value + ","+"\n")
-
-    f.write(hex_values[-1] + ";"+"\n")
+        f.write(hex_values[-1] + ";\n")
 
     f.close()
     print(f"Generated COE file: {output_path}")
