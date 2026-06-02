@@ -1,0 +1,570 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Jun  1 20:39:51 2026
+# Process ID: 14488
+# Current directory: O:/CS56/Engs31Final_Vishal
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23564 O:\CS56\Engs31Final_Vishal\Engs31Final_Vishal.xpr
+# Log file: O:/CS56/Engs31Final_Vishal/vivado.log
+# Journal file: O:/CS56/Engs31Final_Vishal\vivado.jou
+# Running On: c011-04, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 20, Host memory: 34031 MB
+#-----------------------------------------------------------
+start_gui
+open_project O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.0/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.1 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.1/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.2 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.2/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/es/1.0/board.xml as part xczu58dr-fsvg1517-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.0/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.1 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.1/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.2/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.gen/sources_1'.
+INFO: [BD 41-2613] The output directory o:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.gen/sources_1/bd/design_1 for design_1 cannot be found.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 1322.891 ; gain = 56.098
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAC4DA
+set_property PROGRAM.FILE {O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1/VGA_top_lvl.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1/VGA_top_lvl.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+add_files -norecurse O:/CS56/Whack-A-Mole/joystick_module.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+update_compile_order -fileset sim_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: VGA_top_lvl
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3728.457 ; gain = 333.117
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'VGA_top_lvl' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:34]
+INFO: [Synth 8-3491] module 'VGA' declared at 'O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:7' bound to instance 'uut_VGA' of component 'VGA' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'VGA' [O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:17]
+WARNING: [Synth 8-6014] Unused sequential element prevPCLK_reg was removed.  [O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (1#1) [O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:17]
+INFO: [Synth 8-3491] module 'vga_test_pattern' declared at 'O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:18' bound to instance 'uut_vga_test_pattern' of component 'vga_test_pattern' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'vga_test_pattern' [O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'vga_test_pattern' (2#1) [O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'VGA_top_lvl' (3#1) [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:34]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3783.258 ; gain = 387.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3801.184 ; gain = 405.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3801.184 ; gain = 405.844
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3801.184 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc]
+Finished Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3913.887 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 4024.148 ; gain = 628.809
+11 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 4024.148 ; gain = 887.590
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4084.961 ; gain = 15.953
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'VGA_top_lvl' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:34]
+INFO: [Synth 8-3491] module 'VGA' declared at 'O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:7' bound to instance 'uut_VGA' of component 'VGA' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'VGA' [O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:17]
+WARNING: [Synth 8-6014] Unused sequential element prevPCLK_reg was removed.  [O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (1#1) [O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:17]
+INFO: [Synth 8-3491] module 'vga_test_pattern' declared at 'O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:18' bound to instance 'uut_vga_test_pattern' of component 'vga_test_pattern' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'vga_test_pattern' [O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'vga_test_pattern' (2#1) [O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'VGA_top_lvl' (3#1) [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:34]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4106.316 ; gain = 37.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4124.215 ; gain = 55.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4124.215 ; gain = 55.207
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 4153.895 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc]
+Finished Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc]
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 4153.895 ; gain = 84.887
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1/VGA_top_lvl.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+add_files -norecurse O:/CS56/Whack-A-Mole/system_clock_generator.vhd
+update_compile_order -fileset sources_1
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAC4DA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAC4DA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property top JoyStick [current_fileset]
+set_property top JoyStick_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'JoyStick_tb'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'JoyStick_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj JoyStick_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "O:/CS56/Whack-A-Mole/joystick_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'JoyStick'
+ERROR: [VRFC 10-3564] near string '"1001100100"' ; 6 visible types match here [O:/CS56/Whack-A-Mole/joystick_module.vhd:285]
+ERROR: [VRFC 10-298] ambiguous type: 'std_logic_vector_93' or 'std_ulogic_vector' [O:/CS56/Whack-A-Mole/joystick_module.vhd:285]
+ERROR: [VRFC 10-3559] near 'unsigned' ; type conversion expression type cannot be determined uniquely [O:/CS56/Whack-A-Mole/joystick_module.vhd:285]
+ERROR: [VRFC 10-1470] type conversion (to unresolved_unsigned) cannot have string literal operand [O:/CS56/Whack-A-Mole/joystick_module.vhd:285]
+ERROR: [VRFC 10-3564] near string '"0110011100"' ; 6 visible types match here [O:/CS56/Whack-A-Mole/joystick_module.vhd:286]
+ERROR: [VRFC 10-298] ambiguous type: 'std_logic_vector_93' or 'std_ulogic_vector' [O:/CS56/Whack-A-Mole/joystick_module.vhd:286]
+ERROR: [VRFC 10-3559] near 'unsigned' ; type conversion expression type cannot be determined uniquely [O:/CS56/Whack-A-Mole/joystick_module.vhd:286]
+ERROR: [VRFC 10-1470] type conversion (to unresolved_unsigned) cannot have string literal operand [O:/CS56/Whack-A-Mole/joystick_module.vhd:286]
+ERROR: [VRFC 10-3564] near string '"1001100100"' ; 6 visible types match here [O:/CS56/Whack-A-Mole/joystick_module.vhd:287]
+ERROR: [VRFC 10-298] ambiguous type: 'std_logic_vector_93' or 'std_ulogic_vector' [O:/CS56/Whack-A-Mole/joystick_module.vhd:287]
+ERROR: [VRFC 10-3559] near 'unsigned' ; type conversion expression type cannot be determined uniquely [O:/CS56/Whack-A-Mole/joystick_module.vhd:287]
+ERROR: [VRFC 10-1470] type conversion (to unresolved_unsigned) cannot have string literal operand [O:/CS56/Whack-A-Mole/joystick_module.vhd:287]
+ERROR: [VRFC 10-3564] near string '"0110011100"' ; 6 visible types match here [O:/CS56/Whack-A-Mole/joystick_module.vhd:288]
+ERROR: [VRFC 10-298] ambiguous type: 'std_logic_vector_93' or 'std_ulogic_vector' [O:/CS56/Whack-A-Mole/joystick_module.vhd:288]
+ERROR: [VRFC 10-3559] near 'unsigned' ; type conversion expression type cannot be determined uniquely [O:/CS56/Whack-A-Mole/joystick_module.vhd:288]
+ERROR: [VRFC 10-1470] type conversion (to unresolved_unsigned) cannot have string literal operand [O:/CS56/Whack-A-Mole/joystick_module.vhd:288]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [O:/CS56/Whack-A-Mole/joystick_module.vhd:50]
+INFO: [VRFC 10-3070] VHDL file 'O:/CS56/Whack-A-Mole/joystick_module.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'JoyStick_tb'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'JoyStick_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj JoyStick_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "O:/CS56/Whack-A-Mole/joystick_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'JoyStick'
+INFO: [VRFC 10-163] Analyzing VHDL file "O:/CS56/Whack-A-Mole/joystick_moduletb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'JoyStick_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.math_real
+Compiling package unisim.vcomponents
+Compiling architecture behavioral of entity xil_defaultlib.JoyStick [\JoyStick(delay_count=5)\]
+Compiling architecture sim of entity xil_defaultlib.joystick_tb
+Built simulation snapshot JoyStick_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "JoyStick_tb_behav -key {Behavioral:sim_1:Functional:JoyStick_tb} -tclbatch {JoyStick_tb.tcl} -view {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg
+WARNING: Simulation object /VGA_tb/clk was not found in the design.
+WARNING: Simulation object /VGA_tb/uut/V_video_on was not found in the design.
+WARNING: Simulation object /VGA_tb/V_sync was not found in the design.
+WARNING: Simulation object /VGA_tb/H_sync was not found in the design.
+WARNING: Simulation object /VGA_tb/video_on was not found in the design.
+WARNING: Simulation object /VGA_tb/pixel_x was not found in the design.
+WARNING: Simulation object /VGA_tb/pixel_y was not found in the design.
+WARNING: Simulation object /VGA_tb/uut/vsync was not found in the design.
+WARNING: Simulation object /VGA_tb/uut/hsync_clk was not found in the design.
+WARNING: Simulation object /VGA_tb/uut/H_video_on was not found in the design.
+WARNING: Simulation object /VGA_tb/uut/vlines was not found in the design.
+source JoyStick_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100 ms
+Note: Txn 0  x=300 (exp 300)  y=600 (exp 600)  btn=5 (exp 5)
+Time: 75020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+Note: Txn 1  x=1023 (exp 1023)  y=0 (exp 0)  btn=2 (exp 2)
+Time: 155020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+Note: Txn 2  x=512 (exp 512)  y=511 (exp 511)  btn=7 (exp 7)
+Time: 235020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+Note: All transactions checked.
+Time: 240020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'JoyStick_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100 ms
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 4176.379 ; gain = 16.938
+current_wave_config {VGA_tb_behav.wcfg}
+VGA_tb_behav.wcfg
+add_wave {{/JoyStick_tb/dut/right_move}} 
+current_wave_config {VGA_tb_behav.wcfg}
+VGA_tb_behav.wcfg
+add_wave {{/JoyStick_tb/dut/left_move}} 
+current_wave_config {VGA_tb_behav.wcfg}
+VGA_tb_behav.wcfg
+add_wave {{/JoyStick_tb/dut/up}} 
+current_wave_config {VGA_tb_behav.wcfg}
+VGA_tb_behav.wcfg
+add_wave {{/JoyStick_tb/dut/down}} 
+current_wave_config {VGA_tb_behav.wcfg}
+VGA_tb_behav.wcfg
+add_wave {{/JoyStick_tb/dut/spi_s_data_port}} 
+current_wave_config {VGA_tb_behav.wcfg}
+VGA_tb_behav.wcfg
+add_wave {{/JoyStick_tb/dut/spi_cs_port}} 
+save_wave_config {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'JoyStick_tb'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'JoyStick_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj JoyStick_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "JoyStick_tb_behav -key {Behavioral:sim_1:Functional:JoyStick_tb} -tclbatch {JoyStick_tb.tcl} -view {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg
+source JoyStick_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100 ms
+Note: Txn 0  x=300 (exp 300)  y=600 (exp 600)  btn=5 (exp 5)
+Time: 75020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+Note: Txn 1  x=1023 (exp 1023)  y=0 (exp 0)  btn=2 (exp 2)
+Time: 155020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+Note: Txn 2  x=512 (exp 512)  y=511 (exp 511)  btn=7 (exp 7)
+Time: 235020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+Note: All transactions checked.
+Time: 240020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'JoyStick_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100 ms
+current_wave_config {VGA_tb_behav.wcfg}
+VGA_tb_behav.wcfg
+add_wave {{/JoyStick_tb/x_axis}} 
+current_wave_config {VGA_tb_behav.wcfg}
+VGA_tb_behav.wcfg
+add_wave {{/JoyStick_tb/y_axis}} 
+current_wave_config {VGA_tb_behav.wcfg}
+VGA_tb_behav.wcfg
+add_wave {{/JoyStick_tb/buttons}} 
+save_wave_config {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'JoyStick_tb'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'JoyStick_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj JoyStick_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "JoyStick_tb_behav -key {Behavioral:sim_1:Functional:JoyStick_tb} -tclbatch {JoyStick_tb.tcl} -view {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg
+source JoyStick_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100 ms
+Note: Txn 0  x=300 (exp 300)  y=600 (exp 600)  btn=5 (exp 5)
+Time: 75020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+Note: Txn 1  x=1023 (exp 1023)  y=0 (exp 0)  btn=2 (exp 2)
+Time: 155020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+Note: Txn 2  x=512 (exp 512)  y=511 (exp 511)  btn=7 (exp 7)
+Time: 235020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+Note: All transactions checked.
+Time: 240020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'JoyStick_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100 ms
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 4179.441 ; gain = 0.312
+add_files -norecurse O:/CS56/Whack-A-Mole/seven_seg_driver.vhd
+update_compile_order -fileset sources_1
+set_property top Whack_a_mole_top_lvl [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4357.914 ; gain = 17.922
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'JoyStick' [O:/CS56/Whack-A-Mole/joystick_module.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'JoyStick' (1#1) [O:/CS56/Whack-A-Mole/joystick_module.vhd:50]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4383.566 ; gain = 43.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4401.312 ; gain = 61.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4401.312 ; gain = 61.320
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 4436.891 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_ext_port'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk_ext_port'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk_ext_port'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:4]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk_ext_port]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:4]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'hsync'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hsync'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vsync'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vsync'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'red[0]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'red[1]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'red[2]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'red[3]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'red[*]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'green[0]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'green[1]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'green[2]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'green[3]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'green[*]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'blue[0]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'blue[1]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'blue[2]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'blue[3]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'blue[*]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc]
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 4436.891 ; gain = 96.898
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.srcs/utils_1/imports/synth_1/VGA_top_lvl.dcp with file O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/synth_1/VGA_top_lvl.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/synth_1
+

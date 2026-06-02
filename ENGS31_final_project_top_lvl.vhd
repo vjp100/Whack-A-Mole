@@ -136,7 +136,7 @@ architecture Behavioral of Whack_a_mole_top_lvl  is
             data_port       : in std_logic_vector(15 downto 0);
             seg_port        : out std_logic_vector(6 downto 0);
             dp_port         : out std_logic ;
-            an_port         : out std_logic_vector (3 downto 0);
+            an_port         : out std_logic_vector (3 downto 0)
          );
      end component seven_seg_driver ;
      

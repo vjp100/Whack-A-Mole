@@ -1,0 +1,1975 @@
+/*
+
+Xilinx Vivado v2021.2 (64-bit) [Major: 2021, Minor: 2]
+SW Build: 3367213 on Tue Oct 19 02:48:09 MDT 2021
+IP Build: 3369179 on Thu Oct 21 08:25:16 MDT 2021
+
+Process ID (PID): 14488
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Jun 01 20:40:00 EDT 2026
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 28
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	C:/Xilinx/Vivado/2021.2/tps/win64/jre11.0.11_9
+Java executable: 	C:/Xilinx/Vivado/2021.2/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	f0078v7
+User home directory: C:/Users/f0078v7
+User working directory: O:/CS56/Engs31Final_Vishal
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2021.2
+RDI_DATADIR: C:/Xilinx/Vivado/2021.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2021.2/bin
+
+Vivado preferences file: C:/Users/f0078v7/AppData/Roaming/Xilinx/Vivado/2021.2/vivado.xml
+Vivado preferences directory: C:/Users/f0078v7/AppData/Roaming/Xilinx/Vivado/2021.2/
+Vivado layouts directory: C:/Users/f0078v7/AppData/Roaming/Xilinx/Vivado/2021.2/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2021.2/lib/classes/planAhead.jar
+Vivado log file: 	O:/CS56/Engs31Final_Vishal/vivado.log
+Vivado journal file: 	O:/CS56/Engs31Final_Vishal/vivado.jou
+Engine tmp dir: 	O:/CS56/Engs31Final_Vishal/.Xil/Vivado-14488-c011-04
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@xilinx-license.thayer.dartmouth.edu
+XILINX_DSP: C:/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2021.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2021.2
+XILINX_SDK: C:/Xilinx/Vitis/2021.2
+XILINX_VITIS: C:/Xilinx/Vitis/2021.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2021.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2021.2
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,289 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 67 MB (+67719kb) [00:00:03]
+// [Engine Memory]: 1,289 MB (+1200273kb) [00:00:03]
+// Opening Vivado Project: O:\CS56\Engs31Final_Vishal\Engs31Final_Vishal.xpr. Version: Vivado v2021.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,289 MB. GUI used memory: 53 MB. Current time: 6/1/26, 8:40:01 PM EDT
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 78 MB (+8315kb) [00:00:09]
+// WARNING: HEventQueue.dispatchEvent() is taking  1451 ms.
+// Tcl Message: open_project O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.gen/sources_1'. INFO: [BD 41-2613] The output directory o:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.gen/sources_1/bd/design_1 for design_1 cannot be found. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'. 
+// [GUI Memory]: 83 MB (+1349kb) [00:00:10]
+// Project name: Engs31Final_Vishal; location: O:/CS56/Engs31Final_Vishal; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 1322.891 ; gain = 56.098 
+dismissDialog("Open Project"); // bA
+// [GUI Memory]: 102 MB (+15511kb) [00:00:12]
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 110 MB (+2516kb) [00:00:14]
+// [GUI Memory]: 119 MB (+3716kb) [00:00:31]
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// 'cR' command handler elapsed time: 3 seconds
+selectButton("OptionPane.button", "Cancel"); // JButton
+// [GUI Memory]: 129 MB (+4043kb) [00:00:37]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // n - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Open Hardware Manager"); // bA
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // g
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ao
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 INFO: [Labtools 27-3414] Connected to existing cs_server. 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  2769 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACAC4DA 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,869 MB. GUI used memory: 70 MB. Current time: 6/1/26, 8:40:37 PM EDT
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "localhost (1) ; Connected", 0, "localhost (1)", 0, true); // t - Node
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1/VGA_top_lvl.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// [Engine Memory]: 2,869 MB (+1588890kb) [00:00:44]
+dismissDialog("Auto Connect"); // bA
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1/VGA_top_lvl.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bA
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // n - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGA_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd)]", 1, true); // D - Node
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // D
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+// Elapsed time: 17 seconds
+setFileChooser("O:/CS56/Whack-A-Mole/joystick_module.vhd");
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 24 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse O:/CS56/Whack-A-Mole/joystick_module.vhd 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGA_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd)]", 1); // D
+// HMemoryUtils.trashcanNow. Engine heap size: 2,884 MB. GUI used memory: 75 MB. Current time: 6/1/26, 8:41:26 PM EDT
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGA_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, JoyStick(Behavioral) (joystick_module.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, JoyStick(Behavioral) (joystick_module.vhd)]", 4, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1118 ms.
+dismissDialog("Opening Editor"); // bA
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6, true); // D - Node
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // D
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+// Elapsed time: 44 seconds
+setFileChooser("O:/CS56/Whack-A-Mole/joystick_moduletb.vhd");
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 50 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 -norecurse O:/CS56/Whack-A-Mole/joystick_moduletb.vhd 
+// [GUI Memory]: 136 MB (+308kb) [00:02:38]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // n - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Elaborate Design"); // A
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7a35tcpg236-1 Top: VGA_top_lvl 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,045 MB. GUI used memory: 79 MB. Current time: 6/1/26, 8:42:46 PM EDT
+// TclEventType: ELABORATE_START
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,648 MB. GUI used memory: 79 MB. Current time: 6/1/26, 8:42:53 PM EDT
+// [Engine Memory]: 3,649 MB (+667991kb) [00:02:59]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a35tcpg236-1 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3728.457 ; gain = 333.117 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'VGA_top_lvl' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:34] INFO: [Synth 8-3491] module 'VGA' declared at 'O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:7' bound to instance 'uut_VGA' of component 'VGA' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:70] INFO: [Synth 8-638] synthesizing module 'VGA' [O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:17] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'VGA' (1#1) [O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:17] INFO: [Synth 8-3491] module 'vga_test_pattern' declared at 'O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:18' bound to instance 'uut_vga_test_pattern' of component 'vga_test_pattern' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:80] INFO: [Synth 8-638] synthesizing module 'vga_test_pattern' [O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:23] INFO: [Synth 8-256] done synthesizing module 'vga_test_pattern' (2#1) [O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:23] INFO: [Synth 8-256] done synthesizing module 'VGA_top_lvl' (3#1) [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:34] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3783.258 ; gain = 387.918 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3801.184 ; gain = 405.844 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3801.184 ; gain = 405.844 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3801.184 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc] Finished Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc] Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3913.887 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// [GUI Memory]: 150 MB (+7621kb) [00:03:01]
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 4024.148 ; gain = 628.809 
+// Tcl Message: 11 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 4024.148 ; gain = 887.590 
+// 'el' command handler elapsed time: 13 seconds
+// Elapsed time: 10 seconds
+dismissDialog("Open Elaborated Design"); // bA
+// [GUI Memory]: 160 MB (+2588kb) [00:03:02]
+selectButton(PAResourceItoN.NetlistSchematicView_SHOW_CELLS_IN_THIS_SCHEMATIC, "5 Cells"); // g
+selectButton(PAResourceItoN.NetlistSchematicView_SHOW_CELLS_IN_THIS_SCHEMATIC, "5 Cells"); // g
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 2); // m
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 2, true, false); // m - Popup Trigger
+// [GUI Memory]: 169 MB (+1236kb) [00:03:15]
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGA_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGA_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGA_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1063 ms.
+dismissDialog("Opening Editor"); // bA
+// Elapsed time: 17 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 170, 278); // be
+// Elapsed time: 21 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 2); // m
+selectCodeEditor("joystick_module.vhd", 56, 88); // be
+// HMemoryUtils.trashcanNow. Engine heap size: 3,813 MB. GUI used memory: 112 MB. Current time: 6/1/26, 8:44:41 PM EDT
+typeControlKey((HResource) null, "joystick_module.vhd", 'c'); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 3); // m
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'v'); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // g
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// [Engine Memory]: 3,833 MB (+1348kb) [00:05:18]
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4084.961 ; gain = 15.953 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'VGA_top_lvl' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:34] INFO: [Synth 8-3491] module 'VGA' declared at 'O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:7' bound to instance 'uut_VGA' of component 'VGA' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:94] INFO: [Synth 8-638] synthesizing module 'VGA' [O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:17] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'VGA' (1#1) [O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd:17] INFO: [Synth 8-3491] module 'vga_test_pattern' declared at 'O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:18' bound to instance 'uut_vga_test_pattern' of component 'vga_test_pattern' [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:104] INFO: [Synth 8-638] synthesizing module 'vga_test_pattern' [O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:23] INFO: [Synth 8-256] done synthesizing module 'vga_test_pattern' (2#1) [O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd:23] INFO: [Synth 8-256] done synthesizing module 'VGA_top_lvl' (3#1) [O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd:34] 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,890 MB. GUI used memory: 103 MB. Current time: 6/1/26, 8:45:15 PM EDT
+// Engine heap size: 3,890 MB. GUI used memory: 104 MB. Current time: 6/1/26, 8:45:15 PM EDT
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4106.316 ; gain = 37.309 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4124.215 ; gain = 55.207 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4124.215 ; gain = 55.207 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,890 MB. GUI used memory: 88 MB. Current time: 6/1/26, 8:45:16 PM EDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 4153.895 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc] Finished Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc] Completed Processing XDC Constraints  
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 4153.895 ; gain = 84.887 
+dismissDialog("Reloading"); // bA
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectCodeEditor("joystick_module.vhd", 345, 364); // be
+// Elapsed time: 177 seconds
+selectCodeEditor("joystick_module.vhd", 249, 408, false, false, false, true, false); // be - Popup Trigger
+selectCodeEditor("joystick_module.vhd", 249, 408); // be
+selectCodeEditor("joystick_module.vhd", 249, 408); // be
+selectCodeEditor("joystick_module.vhd", 73, 275); // be
+selectCodeEditor("joystick_module.vhd", 19, 267); // be
+selectCodeEditor("joystick_module.vhd", 327, 272); // be
+selectCodeEditor("joystick_module.vhd", 96, 198); // be
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  1058 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 2); // m
+// Elapsed time: 16 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 128 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 510, 496); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 480, 489); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 480, 496); // be
+// Elapsed time: 35 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 88, 537); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 77, 534); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 230, 531); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 2); // m
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 76, 531); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 244, 540); // be
+// Elapsed time: 110 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 117, 235); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 116, 234, false, false, false, false, true); // be - Double Click
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'c'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 226, 498); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'v'); // be
+// Elapsed time: 12 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 94, 234); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 93, 234, false, false, false, false, true); // be - Double Click
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'c'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 188, 508); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'v'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 161, 501); // be
+// Elapsed time: 22 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 130, 115); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 130, 115, false, false, false, false, true); // be - Double Click
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'c'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 248, 493); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 237, 478); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 176, 507); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'v'); // be
+// Elapsed time: 32 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 115, 79); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 115, 79, false, false, false, false, true); // be - Double Click
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'c'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 192, 503); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'v'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 54, 248); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'c'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 128, 486); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 170, 491); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'v'); // be
+typeControlKey(null, null, 'z');
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 174, 373); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 67, 366); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 61, 362); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'v'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 2, 381); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 155, 376); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 152, 369); // be
+// Elapsed time: 18 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 155, 431); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 127, 447); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 117, 434); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 150, 439); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 155, 436); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 155, 452); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 153, 466); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 151, 541); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 177, 347); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 184, 374); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 186, 365); // be
+// Elapsed time: 126 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 68, 315); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 68, 315, false, false, false, false, true); // be - Double Click
+// Elapsed time: 21 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 108, 326); // be
+// Elapsed time: 10 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 54, 383); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 65, 350); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'v'); // be
+// Elapsed time: 92 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 67, 384); // be
+// Elapsed time: 27 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 103, 363); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 22, 366); // be
+// Elapsed time: 10 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 32, 437); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 13, 405); // be
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 34, 366); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 34, 373); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 52, 390); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 486, 506); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 72, 535); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 72, 535, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 21, 370); // be
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 285, 400); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 316, 398); // be
+typeControlKey(null, null, 'z');
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 462, 512); // be
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+typeControlKey(null, null, 'z');
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 178 MB (+689kb) [00:23:32]
+// Elapsed time: 14 seconds
+selectRadioButton(PAResourceEtoH.FloatingTopDialog_IGNORE_AND_CONTINUE_WITH_INVALID_TOP, "Ignore and continue with invalid top module"); // a
+selectRadioButton(PAResourceEtoH.FloatingTopDialog_AUTOMATICALLY_PICK_NEW_TOP_MODULE, "Automatically pick new top module"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Invalid Top Module"); // I
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 309, 506); // be
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 93 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 27, false); // n
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ao
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1/VGA_top_lvl.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 1); // m
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 100, 285); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 442, 162); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 174, 285); // be
+// Elapsed time: 159 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 313, 336); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 265, 345); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 128, 339); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 206, 455); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 206, 455, false, false, false, false, true); // be - Double Click
+// Elapsed time: 22 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 459, 221); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 457, 218); // be
+typeControlKey(null, null, 'z');
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 69, 324); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 69, 316); // be
+typeControlKey(null, null, 'z');
+// Elapsed time: 37 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 59, 238); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 36, 238); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 31, 240); // be
+typeControlKey(null, null, 'z');
+// Elapsed time: 17 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 108, 455); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 108, 455, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 108, 455); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 28, 283); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 272, 280); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 42, 445); // be
+// Elapsed time: 126 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 106, 443); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 103, 463); // be
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 114 MB. Current time: 6/1/26, 9:15:16 PM EDT
+// Elapsed time: 138 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 540, 159); // be
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 280, 236); // be
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1053 ms. Increasing delay to 3000 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 647 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 1); // m
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // n - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ENGS31_final_project_top_lvl.vhd]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ENGS31_final_project_top_lvl.vhd]", 2, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1069 ms.
+dismissDialog("Opening Editor"); // bA
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 366, 165); // be
+// Elapsed time: 260 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ENGS31_final_project_top_lvl.vhd]", 2, false); // D
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 2); // m
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 205 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // g
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 109, 186); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 109, 186, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 109, 186); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 76 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // D
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+setFileChooser("O:/CS56/Whack-A-Mole/system_clock_generator.vhd");
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 8 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse O:/CS56/Whack-A-Mole/system_clock_generator.vhd 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 21 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 40, 151); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 322, 162); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 32, 317); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 28, 368); // be
+// Elapsed time: 16 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 31, 371); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 285, 394); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 282, 388); // be
+// Elapsed time: 19 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 193, 301); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 193, 301, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 443, 388); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 106 MB. Current time: 6/1/26, 9:45:19 PM EDT
+// Elapsed time: 789 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 1); // m
+selectCodeEditor("joystick_module.vhd", 73, 233); // be
+selectCodeEditor("joystick_module.vhd", 73, 233, false, false, false, false, true); // be - Double Click
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAC4DA 
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Elapsed time: 273 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Close Hardware Target"); // o
+// Elapsed time: 30 seconds
+selectCodeEditor("joystick_module.vhd", 314, 264); // be
+// Elapsed time: 67 seconds
+selectCodeEditor("joystick_module.vhd", 344, 247); // be
+selectCodeEditor("joystick_module.vhd", 335, 262); // be
+selectCodeEditor("joystick_module.vhd", 349, 267); // be
+// Elapsed time: 24 seconds
+selectCodeEditor("joystick_module.vhd", 377, 267); // be
+selectCodeEditor("joystick_module.vhd", 349, 266); // be
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 2); // m
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 1); // m
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 2); // m
+// Elapsed time: 61 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 1); // m
+// Elapsed time: 41 seconds
+selectCodeEditor("joystick_module.vhd", 63, 435); // be
+selectCodeEditor("joystick_module.vhd", 143, 435); // be
+selectCodeEditor("joystick_module.vhd", 314, 264); // be
+// Elapsed time: 19 seconds
+selectCodeEditor("joystick_module.vhd", 131, 346); // be
+// Elapsed time: 23 seconds
+selectCodeEditor("joystick_module.vhd", 316, 400); // be
+selectCodeEditor("joystick_module.vhd", 313, 382); // be
+selectCodeEditor("joystick_module.vhd", 183, 248); // be
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  1439 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1764 ms. Increasing delay to 4000 ms.
+// Elapsed time: 119 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 2); // m
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 223, 359); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 227, 370); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 227, 370, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 264, 361, false, false, false, true, false); // be - Popup Trigger
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 225, 349); // be
+// Elapsed time: 30 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 1); // m
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 2); // m
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 215, 379); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 215, 379, false, false, false, false, true); // be - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 2); // m
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 1); // m
+selectCodeEditor("joystick_module.vhd", 133, 267); // be
+selectCodeEditor("joystick_module.vhd", 133, 267, false, false, false, false, true); // be - Double Click
+selectCodeEditor("joystick_module.vhd", 118, 216); // be
+selectCodeEditor("joystick_module.vhd", 118, 216, false, false, false, false, true); // be - Double Click
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 2); // m
+// Elapsed time: 12 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 215, 435); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 215, 435, false, false, false, false, true); // be - Double Click
+// Elapsed time: 30 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 383, 466); // be
+// Elapsed time: 58 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 315, 445); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 316, 441); // be
+// Elapsed time: 21 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 509, 399); // be
+// Elapsed time: 34 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 129, 331); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 129, 331, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 81, 232); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 98, 234); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 98, 234, false, false, false, false, true); // be - Double Click
+typeControlKey(null, null, 'z');
+// Elapsed time: 13 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "jstk_sclk"); // k
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 152, 252); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 152, 252, false, false, false, false, true); // be - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 225 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 142, 116); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 259, 113); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 163, 120); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 163, 120, false, false, false, false, true); // be - Double Click
+// Elapsed time: 16 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 108, 397); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 113, 400); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 207, 409); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 207, 404); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 207, 404); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 207, 404, false, false, false, false, true); // be - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 171, 384); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 193, 386); // be
+// Elapsed time: 15 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 124, 380); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 229, 384); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 244, 472); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 274, 471); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 145, 353); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 291, 431); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 203, 349); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 138, 365); // be
+// Elapsed time: 28 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 114, 304); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 114, 304, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 121, 420); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 121, 420, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 138, 421); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 201, 421); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 201, 421, false, false, false, false, true); // be - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 107 MB. Current time: 6/1/26, 10:15:20 PM EDT
+// Elapsed time: 183 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 254, 224); // be
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 267, 252); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 267, 252, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 267, 252); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 199, 228); // be
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 192, 127); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 184, 65); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 181, 320); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 134, 416); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 134, 416, false, false, false, false, true); // be - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 259, 467); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 240, 416); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 317, 387); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 211, 298); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 229, 362); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 109, 301); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 109, 301, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 109, 301); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 117, 312); // be
+// Elapsed time: 21 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 122, 351); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 122, 351, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 147, 264); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 158, 264); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 161, 264); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 293, 309); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 60, 248); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 60, 248, false, false, false, false, true); // be - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 84, 194); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 549, 70); // be
+// Elapsed time: 79 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGA_tb(testbench) (VGA_SYNCer_tb.vhd)]", 1, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGA_tb(testbench) (VGA_SYNCer_tb.vhd)]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Whack_a_mole_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd)]", 3); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Whack_a_mole_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd), uut_Joystick : JoyStick(Behavioral) (joystick_module.vhd)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Whack_a_mole_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd), uut_Joystick : JoyStick(Behavioral) (joystick_module.vhd)]", 7, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top JoyStick [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, JoyStick_tb(sim) (joystick_moduletb.vhd)]", 14, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, JoyStick_tb(sim) (joystick_moduletb.vhd)]", 14, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top JoyStick_tb [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed time: 121 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'JoyStick_tb' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0' INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'JoyStick_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj JoyStick_tb_vhdl.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-99] Step results log file:'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 7 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.", 1); // b
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim/xvhdl.log' file for more information.", 0); // b
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim/xvhdl.log' file for more information.", 0); // b
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim/xvhdl.log' file for more information.", 0, false, false, false, false, true); // b - Double Click
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, rtl_1, General Messages, [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAC4DA. ]", 2, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, rtl_1, General Messages, [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim/xvhdl.log' file for more information.. ]", 3, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, rtl_1, General Messages, [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim/xvhdl.log' file for more information.. ]", 3, false, false, false, false, false, true); // ah - Double Click
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 240, 80); // dT
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 930, 77); // dT
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1043, 77); // dT
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1145, 77); // dT
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1145, 77, false, false, false, false, true); // dT - Double Click
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1170, 77); // dT
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1170, 77, false, false, false, false, true); // dT - Double Click
+// Elapsed time: 21 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, rtl_1]", 0, true); // ah - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, rtl_1, General Messages, [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACAC4DA. ]", 2, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, rtl_1, General Messages, [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim/xvhdl.log' file for more information.. ]", 3, false); // ah
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 66 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Whack_a_mole_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd), uut_Joystick : JoyStick(Behavioral) (joystick_module.vhd)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Whack_a_mole_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd), uut_Joystick : JoyStick(Behavioral) (joystick_module.vhd)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Whack_a_mole_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd), uut_Joystick : JoyStick(Behavioral) (joystick_module.vhd)]", 5, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'JoyStick_tb' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj JoyStick_tb_vhdl.prj" INFO: [VRFC 10-163] Analyzing VHDL file "O:/CS56/Whack-A-Mole/joystick_module.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'JoyStick' INFO: [VRFC 10-163] Analyzing VHDL file "O:/CS56/Whack-A-Mole/joystick_moduletb.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'JoyStick_tb' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log" 
+// Tcl Message: Vivado Simulator v2021.2 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log  Using 2 slave threads. 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Starting static elaboration Completed static elaboration Starting simulation data flow analysis Completed simulation data flow analysis Time Resolution for simulation is 1ps Compiling package std.standard Compiling package std.textio Compiling package ieee.std_logic_1164 Compiling package ieee.numeric_std Compiling package ieee.math_real Compiling package unisim.vcomponents Compiling architecture behavioral of entity xil_defaultlib.JoyStick [\JoyStick(delay_count=5)\] Compiling architecture sim of entity xil_defaultlib.joystick_tb Built simulation snapshot JoyStick_tb_behav 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "JoyStick_tb_behav -key {Behavioral:sim_1:Functional:JoyStick_tb} -tclbatch {JoyStick_tb.tcl} -view {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 115 MB. Current time: 6/1/26, 10:24:56 PM EDT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: open_wave_config O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg 
+// Tcl Message: source JoyStick_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 100 ms 
+// Tcl Message: Note: Txn 0  x=300 (exp 300)  y=600 (exp 600)  btn=5 (exp 5) Time: 75020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd Note: Txn 1  x=1023 (exp 1023)  y=0 (exp 0)  btn=2 (exp 2) Time: 155020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd Note: Txn 2  x=512 (exp 512)  y=511 (exp 511)  btn=7 (exp 7) Time: 235020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd Note: All transactions checked. Time: 240020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'JoyStick_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 100 ms 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 4176.379 ; gain = 16.938 
+// 'd' command handler elapsed time: 8 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "dut ; JoyStick(Behavioral) ; VHDL Entity", 1, "JoyStick(Behavioral)", 1, false); // c
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 114 MB. Current time: 6/1/26, 10:25:07 PM EDT
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 114 MB. Current time: 6/1/26, 10:25:10 PM EDT
+// Elapsed time: 11 seconds
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "x_axis_port[9:0] ; 200 ; Array", 4, "200", 1, true); // c - Node
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "x_axis_port[9:0] ; 200 ; Array", 4, "200", 1, true); // c - Node
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "right_move ; 0 ; Logic", 6, "right_move", 0, false); // c
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "right_move ; 0 ; Logic", 6, "right_move", 0, false, false, false, false, true, false); // c - Popup Trigger
+selectMenuItem((HResource) null, "Add to Wave Window"); // ao
+// Tcl Command: 'current_wave_config {VGA_tb_behav.wcfg}'
+// Tcl Message: current_wave_config {VGA_tb_behav.wcfg} 
+// Tcl Message: VGA_tb_behav.wcfg 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// Tcl Message: add_wave {{/JoyStick_tb/dut/right_move}}  
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "left_move ; 0 ; Logic", 7, "left_move", 0, false); // c
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "left_move ; 0 ; Logic", 7, "left_move", 0, false, false, false, false, true, false); // c - Popup Trigger
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectMenuItem((HResource) null, "Add to Wave Window"); // ao
+// Tcl Command: 'current_wave_config {VGA_tb_behav.wcfg}'
+// Tcl Message: current_wave_config {VGA_tb_behav.wcfg} 
+// Tcl Message: VGA_tb_behav.wcfg 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// Tcl Message: add_wave {{/JoyStick_tb/dut/left_move}}  
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "up ; 0 ; Logic", 8, "up", 0, false); // c
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "up ; 0 ; Logic", 8, "up", 0, false, false, false, false, true, false); // c - Popup Trigger
+selectMenuItem((HResource) null, "Add to Wave Window"); // ao
+// Tcl Command: 'current_wave_config {VGA_tb_behav.wcfg}'
+// Tcl Message: current_wave_config {VGA_tb_behav.wcfg} 
+// Tcl Message: VGA_tb_behav.wcfg 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: add_wave {{/JoyStick_tb/dut/up}}  
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "down ; 0 ; Logic", 9, "down", 0, false); // c
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "down ; 0 ; Logic", 9, "down", 0, false, false, false, false, true, false); // c - Popup Trigger
+selectMenuItem((HResource) null, "Add to Wave Window"); // ao
+// Tcl Command: 'current_wave_config {VGA_tb_behav.wcfg}'
+// Tcl Message: current_wave_config {VGA_tb_behav.wcfg} 
+// Tcl Message: VGA_tb_behav.wcfg 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// Tcl Message: add_wave {{/JoyStick_tb/dut/down}}  
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_sclk_port ; 0 ; Logic", 10, "spi_sclk_port", 0, false); // c
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_sclk_port ; 0 ; Logic", 10, "spi_sclk_port", 0, false, false, false, false, true, false); // c - Popup Trigger
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_sclk_port ; 0 ; Logic", 10, "spi_sclk_port", 0, false); // c
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_s_data_port ; 1 ; Logic", 3, "spi_s_data_port", 0, false); // c
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_cs_port ; 1 ; Logic", 2, "spi_cs_port", 0, false); // c
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_s_data_port ; 1 ; Logic", 3, "spi_s_data_port", 0, false); // c
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_s_data_port ; 1 ; Logic", 3, "spi_s_data_port", 0, false, false, false, false, true, false); // c - Popup Trigger
+selectMenuItem((HResource) null, "Add to Wave Window"); // ao
+// Tcl Command: 'current_wave_config {VGA_tb_behav.wcfg}'
+// Tcl Message: current_wave_config {VGA_tb_behav.wcfg} 
+// Tcl Message: VGA_tb_behav.wcfg 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// Tcl Message: add_wave {{/JoyStick_tb/dut/spi_s_data_port}}  
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_s_data_port ; 1 ; Logic", 3, "spi_s_data_port", 0, false); // c
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_s_data_port ; 1 ; Logic", 3, "spi_s_data_port", 0, false, false, false, false, true, false); // c - Popup Trigger
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_cs_port ; 1 ; Logic", 2, "spi_cs_port", 0, false); // c
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_cs_port ; 1 ; Logic", 2, "spi_cs_port", 0, false, false, false, false, true, false); // c - Popup Trigger
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectMenuItem((HResource) null, "Add to Wave Window"); // ao
+// Tcl Command: 'current_wave_config {VGA_tb_behav.wcfg}'
+// Tcl Message: current_wave_config {VGA_tb_behav.wcfg} 
+// Tcl Message: VGA_tb_behav.wcfg 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// Tcl Message: add_wave {{/JoyStick_tb/dut/spi_cs_port}}  
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectButton(RDIResource.WaveformView_GOTO_LAST_TIME, "Waveform Viewer_RunAll"); // D
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectButton(RDIResource.WaveformView_GOTO_TIME_0, "Waveform Viewer_RunReset"); // D
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 135 MB. Current time: 6/1/26, 10:25:50 PM EDT
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_CLOSE_WCFG
+selectButton("OptionPane.button", "Save"); // JButton
+// Tcl Message: save_wave_config {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg} 
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "VGA_tb_behav.wcfg"); // w
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bA
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'JoyStick_tb' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj JoyStick_tb_vhdl.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log" Vivado Simulator v2021.2 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log  Using 2 slave threads. Starting static elaboration Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "JoyStick_tb_behav -key {Behavioral:sim_1:Functional:JoyStick_tb} -tclbatch {JoyStick_tb.tcl} -view {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:10 PM EDT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: open_wave_config O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg 
+// Tcl Message: source JoyStick_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 100 ms 
+// Tcl Message: Note: Txn 0  x=300 (exp 300)  y=600 (exp 600)  btn=5 (exp 5) Time: 75020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd Note: Txn 1  x=1023 (exp 1023)  y=0 (exp 0)  btn=2 (exp 2) Time: 155020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd Note: Txn 2  x=512 (exp 512)  y=511 (exp 511)  btn=7 (exp 7) Time: 235020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd Note: All transactions checked. Time: 240020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'JoyStick_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 100 ms 
+// 'd' command handler elapsed time: 11 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:15 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:15 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:15 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:15 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:15 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:15 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:15 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:15 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:17 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 14 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 367, 90); // b
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 253, 92); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:26:27 PM EDT
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 393, 95); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// Elapsed time: 145 seconds
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "y_axis[9:0] ; 1ff ; Array", 6, "y_axis[9:0]", 0, true); // c - Node
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "x_axis[9:0] ; 200 ; Array", 5, "x_axis[9:0]", 0, true); // c - Node
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "x_axis[9:0] ; 200 ; Array", 5, "x_axis[9:0]", 0, true, false, false, false, true, false); // c - Popup Trigger - Node
+selectMenuItem((HResource) null, "Add to Wave Window"); // ao
+// Tcl Command: 'current_wave_config {VGA_tb_behav.wcfg}'
+// Tcl Message: current_wave_config {VGA_tb_behav.wcfg} 
+// Tcl Message: VGA_tb_behav.wcfg 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// Tcl Message: add_wave {{/JoyStick_tb/x_axis}}  
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "y_axis[9:0] ; 1ff ; Array", 6, "y_axis[9:0]", 0, true); // c - Node
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "y_axis[9:0] ; 1ff ; Array", 6, "y_axis[9:0]", 0, true, false, false, false, true, false); // c - Popup Trigger - Node
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectMenuItem((HResource) null, "Add to Wave Window"); // ao
+// Tcl Command: 'current_wave_config {VGA_tb_behav.wcfg}'
+// Tcl Message: current_wave_config {VGA_tb_behav.wcfg} 
+// Tcl Message: VGA_tb_behav.wcfg 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// Tcl Message: add_wave {{/JoyStick_tb/y_axis}}  
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "buttons[2:0] ; 7 ; Array", 7, "buttons[2:0]", 0, true); // c - Node
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "buttons[2:0] ; 7 ; Array", 7, "buttons[2:0]", 0, true, false, false, false, true, false); // c - Popup Trigger - Node
+selectMenuItem((HResource) null, "Add to Wave Window"); // ao
+// Tcl Command: 'current_wave_config {VGA_tb_behav.wcfg}'
+// Tcl Message: current_wave_config {VGA_tb_behav.wcfg} 
+// Tcl Message: VGA_tb_behav.wcfg 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: add_wave {{/JoyStick_tb/buttons}}  
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "down ; 0 ; Logic", 11, "0", 1, false); // c
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:29:06 PM EDT
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "down ; 0 ; Logic", 11, "down", 0, false); // c
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 117 MB. Current time: 6/1/26, 10:29:12 PM EDT
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "TEST_X[0:2] ; 300,1023,512 ; Array", 18, "TEST_X[0:2]", 0, true); // c - Node
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "TEST_X[0:2] ; 300,1023,512 ; Array", 18, "TEST_X[0:2]", 0, true); // c - Node
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "TEST_X[0:2] ; 300,1023,512 ; Array", 18, "TEST_X[0:2]", 0, true); // c - Node
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "TEST_Y[0:2] ; 600,0,511 ; Array", 19, "TEST_Y[0:2]", 0, true); // c - Node
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "TEST_Y[0:2] ; 600,0,511 ; Array", 19, "TEST_Y[0:2]", 0, true, false, false, false, false, true); // c - Double Click - Node
+// TclEventType: SIMULATION_OPEN_SOURCE
+// WARNING: HEventQueue.dispatchEvent() is taking  1063 ms.
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "TEST_BTN[0:2] ; 5,2,7 ; Array", 20, "TEST_BTN[0:2]", 0, true); // c - Node
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "TEST_BTN[0:2] ; 5,2,7 ; Array", 20, "TEST_BTN[0:2]", 0, true, false, false, false, false, true); // c - Double Click - Node
+// TclEventType: SIMULATION_OPEN_SOURCE
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, y_axis[9:0]]", 7, true); // l - Node
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, x_axis[9:0]]", 6, true); // l - Node
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 20, 190); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, x_axis[9:0]]", 6, true, false, false, false, true, false); // l - Popup Trigger - Node
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 121 MB. Current time: 6/1/26, 10:29:27 PM EDT
+selectMenuItem((HResource) null, "Find..."); // ao
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 118 MB. Current time: 6/1/26, 10:29:31 PM EDT
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 140, 169); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// Run Command: RDIResourceCommand.RDICommands_WAVEFORM_SAVE_CONFIGURATION
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: save_wave_config {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg} 
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // j
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - JoyStick_tb", "DesignTask.SIMULATION");
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Confirm Close"); // A
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bA
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // n - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // n - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'JoyStick_tb' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj JoyStick_tb_vhdl.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log" Vivado Simulator v2021.2 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot JoyStick_tb_behav xil_defaultlib.JoyStick_tb -log elaborate.log  Using 2 slave threads. Starting static elaboration Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "JoyStick_tb_behav -key {Behavioral:sim_1:Functional:JoyStick_tb} -tclbatch {JoyStick_tb.tcl} -view {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:29:54 PM EDT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: open_wave_config O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg 
+// Tcl Message: source JoyStick_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 100 ms 
+// Tcl Message: Note: Txn 0  x=300 (exp 300)  y=600 (exp 600)  btn=5 (exp 5) Time: 75020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd Note: Txn 1  x=1023 (exp 1023)  y=0 (exp 0)  btn=2 (exp 2) Time: 155020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd Note: Txn 2  x=512 (exp 512)  y=511 (exp 511)  btn=7 (exp 7) Time: 235020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd Note: All transactions checked. Time: 240020 ns  Iteration: 0  Process: /JoyStick_tb/stim_check  File: O:/CS56/Whack-A-Mole/joystick_moduletb.vhd 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'JoyStick_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 100 ms 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 4179.441 ; gain = 0.312 
+// 'd' command handler elapsed time: 5 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, x_axis[9:0]]", 6, true, false, false, false, true, false); // l - Popup Trigger - Node
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectMenu("Waveform Style"); // al
+selectMenu("Signal Color"); // al
+selectMenu("Radix"); // al
+selectMenu("Radix"); // al
+selectMenuItem((HResource) null, "Unsigned Decimal"); // ac
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:30:08 PM EDT
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, y_axis[9:0]]", 7, true); // l - Node
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, y_axis[9:0]]", 7, true, false, false, false, true, false); // l - Popup Trigger - Node
+selectMenu("Name"); // al
+selectMenu("Waveform Style"); // al
+selectMenu("Signal Color"); // al
+selectMenu("Waveform Style"); // al
+selectMenu("Name"); // al
+selectMenu("Waveform Style"); // al
+selectMenu("Signal Color"); // al
+selectMenu("Radix"); // al
+selectMenuItem((HResource) null, "Unsigned Decimal"); // ac
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:30:14 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, buttons[2:0]]", 8, true, false, false, false, true, false); // l - Popup Trigger - Node
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectMenu("Name"); // al
+selectMenu("Waveform Style"); // al
+selectMenu("Signal Color"); // al
+selectMenu("Radix"); // al
+selectMenu("Signal Color"); // al
+selectMenu("Waveform Style"); // al
+selectMenu("Name"); // al
+selectMenu("Name"); // al
+selectMenu("Waveform Style"); // al
+selectMenu("Signal Color"); // al
+selectMenu("Waveform Style"); // al
+selectMenu("Name"); // al
+selectMenu("Name"); // al
+selectMenu("Waveform Style"); // al
+selectMenu("Signal Color"); // al
+selectMenu("Radix"); // al
+selectMenuItem((HResource) null, "Binary"); // ac
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 39, 69); // b
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:30:26 PM EDT
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 32, 224); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 131, 228); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 211, 220); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 121 MB. Current time: 6/1/26, 10:30:34 PM EDT
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "left_move ; 0 ; Logic", 9, "left_move", 0, false); // c
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:30:48 PM EDT
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "x_axis[9:0] ; 200 ; Array", 5, "x_axis[9:0]", 0, true); // c - Node
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "x_axis[9:0] ; 200 ; Array", 5, "Array", 2, true); // c - Node
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_sclk ; 0 ; Logic", 4, "Logic", 2, false); // c
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_sclk ; 0 ; Logic", 4, "0", 1, false); // c
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "x_axis[9:0] ; 200 ; Array", 5, "x_axis[9:0]", 0, true); // c - Node
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "y_axis[9:0] ; 1ff ; Array", 6, "y_axis[9:0]", 0, true); // c - Node
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "buttons[2:0] ; 7 ; Array", 7, "buttons[2:0]", 0, true); // c - Node
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "dut ; JoyStick(Behavioral) ; VHDL Entity", 1, "JoyStick(Behavioral)", 1, false); // c
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, left_move]", 1, false); // l
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, right_move]", 0, false); // l
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 10 seconds
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_sclk_port ; 0 ; Logic", 10, "Logic", 2, false); // c
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:31:21 PM EDT
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTreeTable(PAResourceQtoS.SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE, "spi_sclk_port ; 0 ; Logic", 10, "Logic", 2, false); // c
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 65, 86); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:31:28 PM EDT
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 143, 72); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 198, 61); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:31:31 PM EDT
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 55, 90); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// Elapsed time: 10 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 58, 203); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 51, 223); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:31:45 PM EDT
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 153, 114); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// Elapsed time: 123 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 38, -24, false, false, false, true, false); // b - Popup Trigger
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 139, 219); // b
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:34:04 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:34:04 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:34:04 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:34:04 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 122 MB. Current time: 6/1/26, 10:34:05 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 46 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 124 MB. Current time: 6/1/26, 10:34:44 PM EDT
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 254, 172); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 296, 119); // b
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // n - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, JoyStick_tb(sim) (joystick_moduletb.vhd)]", 12, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, JoyStick_tb(sim) (joystick_moduletb.vhd)]", 12, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1055 ms.
+dismissDialog("Opening Editor"); // bA
+// Elapsed time: 31 seconds
+selectCodeEditor("joystick_moduletb.vhd", 248, 398); // be
+selectCodeEditor("joystick_moduletb.vhd", 248, 398, false, false, false, false, true); // be - Double Click
+selectCodeEditor("joystick_moduletb.vhd", 232, 400); // be
+// Elapsed time: 31 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // n - Node
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_TASK
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 0); // m
+// Elapsed time: 43 seconds
+selectCodeEditor("joystick_module.vhd", 363, 534); // be
+// Elapsed time: 45 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // n - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true, false, false, false, false, true); // n - Double Click - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // n - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true, false, false, false, false, true); // n - Double Click - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+selectButton("OptionPane.button", "No"); // JButton
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_moduletb.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGA_tb_behav.wcfg*", 2); // m
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 0); // m
+selectCodeEditor("joystick_module.vhd", 449, 188); // be
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 40 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ENGS31_final_project_top_lvl.vhd", 1); // m
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 235, 612); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 193, 593); // be
+// Elapsed time: 51 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 186, 557); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 201, 718); // be
+// Elapsed time: 57 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 444, 600); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 484, 695); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 154, 652); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 303, 407); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 444, 232); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'c'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 312, 404); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'v'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 148, 455); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 450, 466); // be
+// Elapsed time: 164 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 339, 395); // be
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 90 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 306, 652); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 26, 232); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'c'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 85, 664); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 65, 658); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 60, 665); // be
+typeControlKey((HResource) null, "ENGS31_final_project_top_lvl.vhd", 'v'); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 54, 675); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 142, 688); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 137, 720); // be
+// Elapsed time: 32 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 166, 718); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 304, 734); // be
+// Elapsed time: 28 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 299, 734); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 246, 728); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 173, 741); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 220, 726); // be
+// Elapsed time: 46 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 127, 689); // be
+// Elapsed time: 12 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 201, 367); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 103, 363); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 103, 363, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 205, 352); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 205, 352, false, false, false, false, true); // be - Double Click
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 139, 338); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 188, 335); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 188, 335, false, false, false, false, true); // be - Double Click
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "jstk_cs"); // k
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 71, 503); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 113, 451); // be
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  1688 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 48 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joystick_module.vhd", 0); // m
+// Elapsed time: 181 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // n - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files]", 12, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files]", 12, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, ENGS31_final_project_top_lvl.vhd]", 13, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files, ENGS31_final_project_top_lvl.vhd]", 13, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 74, 238); // be
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // D
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+setFileChooser("O:/CS56/Whack-A-Mole/seven_seg_driver.vhd");
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 7 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse O:/CS56/Whack-A-Mole/seven_seg_driver.vhd 
+// [GUI Memory]: 193 MB (+6460kb) [02:13:48]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ENGS31_final_project_top_lvl.vhd]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ENGS31_final_project_top_lvl.vhd]", 2, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 170, 242); // be
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, seven_seg_driver(behavioral) (seven_seg_driver.vhd)]", 8, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, seven_seg_driver(behavioral) (seven_seg_driver.vhd)]", 8, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1073 ms.
+dismissDialog("Opening Editor"); // bA
+// Elapsed time: 11 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "seg"); // k
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ENGS31_final_project_top_lvl.vhd]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ENGS31_final_project_top_lvl.vhd]", 2, false, false, false, false, false, true); // D - Double Click
+dismissDialog("Opening Editor"); // bA
+// Elapsed time: 24 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 315, 137); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 315, 130); // be
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  2023 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1953 ms. Increasing delay to 5859 ms.
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 116 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 240, 175); // be
+// Elapsed time: 10 seconds
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 593, 259); // be
+selectCodeEditor("ENGS31_final_project_top_lvl.vhd", 481, 180); // be
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  2061 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Whack_a_mole_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd)]", 10, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Whack_a_mole_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd)]", 10, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top Whack_a_mole_top_lvl [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // g
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4357.914 ; gain = 17.922 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'JoyStick' [O:/CS56/Whack-A-Mole/joystick_module.vhd:50] INFO: [Synth 8-256] done synthesizing module 'JoyStick' (1#1) [O:/CS56/Whack-A-Mole/joystick_module.vhd:50] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4383.566 ; gain = 43.574 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 110 MB. Current time: 6/1/26, 10:57:39 PM EDT
+// Engine heap size: 3,903 MB. GUI used memory: 111 MB. Current time: 6/1/26, 10:57:39 PM EDT
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4401.312 ; gain = 61.320 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4401.312 ; gain = 61.320 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,903 MB. GUI used memory: 109 MB. Current time: 6/1/26, 10:57:39 PM EDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 4436.891 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc] 
+// Tcl Message: Finished Parsing XDC File [O:/CS56/Whack-A-Mole/ENGS31_final_project_constraints.xdc] Completed Processing XDC Constraints  
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 4436.891 ; gain = 96.898 
+dismissDialog("Reloading"); // bA
+// Elapsed time: 16 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // W
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "Schematic_zoom_fit"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// Elapsed time: 11 seconds
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "Schematic_zoom_fit"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "Schematic_zoom_fit"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "Schematic_zoom_fit"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// Elapsed time: 33 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Whack_a_mole_top_lvl(Behavioral) (ENGS31_final_project_top_lvl.vhd)]", 8); // D
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // A
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [Project 1-1161] Replacing file O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.srcs/utils_1/imports/synth_1/VGA_top_lvl.dcp with file O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/synth_1/VGA_top_lvl.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+// 'k' command handler elapsed time: 13 seconds
+dismissDialog("Launch Runs"); // f

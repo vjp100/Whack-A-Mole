@@ -1,0 +1,4 @@
+Running: xsim.dir/JoyStick_tb_behav/xsimk.exe -simmode gui -wdb JoyStick_tb_behav.wdb -simrunnum 0 -socket 65026
+Design successfully loaded
+Design Loading Memory Usage: 10980 KB (Peak: 10980 KB)
+Design Loading CPU Usage: 61 ms

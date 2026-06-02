@@ -1,0 +1,98 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Jun  1 20:39:51 2026
+# Process ID: 14488
+# Current directory: O:/CS56/Engs31Final_Vishal
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23564 O:\CS56\Engs31Final_Vishal\Engs31Final_Vishal.xpr
+# Log file: O:/CS56/Engs31Final_Vishal/vivado.log
+# Journal file: O:/CS56/Engs31Final_Vishal\vivado.jou
+# Running On: c011-04, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 20, Host memory: 34031 MB
+#-----------------------------------------------------------
+start_gui
+open_project O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1/VGA_top_lvl.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1/VGA_top_lvl.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+add_files -norecurse O:/CS56/Whack-A-Mole/joystick_module.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse O:/CS56/Whack-A-Mole/joystick_moduletb.vhd
+update_compile_order -fileset sim_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+refresh_design
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1/VGA_top_lvl.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+add_files -norecurse O:/CS56/Whack-A-Mole/system_clock_generator.vhd
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top JoyStick [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top JoyStick_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+open_wave_config O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg
+source JoyStick_tb.tcl
+current_wave_config {VGA_tb_behav.wcfg}
+add_wave {{/JoyStick_tb/dut/right_move}} 
+current_wave_config {VGA_tb_behav.wcfg}
+add_wave {{/JoyStick_tb/dut/left_move}} 
+current_wave_config {VGA_tb_behav.wcfg}
+add_wave {{/JoyStick_tb/dut/up}} 
+current_wave_config {VGA_tb_behav.wcfg}
+add_wave {{/JoyStick_tb/dut/down}} 
+current_wave_config {VGA_tb_behav.wcfg}
+add_wave {{/JoyStick_tb/dut/spi_s_data_port}} 
+current_wave_config {VGA_tb_behav.wcfg}
+add_wave {{/JoyStick_tb/dut/spi_cs_port}} 
+save_wave_config {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg
+source JoyStick_tb.tcl
+current_wave_config {VGA_tb_behav.wcfg}
+add_wave {{/JoyStick_tb/x_axis}} 
+current_wave_config {VGA_tb_behav.wcfg}
+add_wave {{/JoyStick_tb/y_axis}} 
+current_wave_config {VGA_tb_behav.wcfg}
+add_wave {{/JoyStick_tb/buttons}} 
+save_wave_config {O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config O:/CS56/Engs31Final_Vishal/VGA_tb_behav.wcfg
+source JoyStick_tb.tcl
+add_files -norecurse O:/CS56/Whack-A-Mole/seven_seg_driver.vhd
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Whack_a_mole_top_lvl [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+refresh_design
+reset_run synth_1

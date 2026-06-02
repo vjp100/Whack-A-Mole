@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="JoyStick_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="JoyStick_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="496.032197 us"></ZoomEndTime>
+      <Cursor1Time time="96.020000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/JoyStick_tb/dut/right_move" type="logic">
+      <obj_property name="ElementShortName">right_move</obj_property>
+      <obj_property name="ObjectShortName">right_move</obj_property>
+   </wvobject>
+   <wvobject fp_name="/JoyStick_tb/dut/left_move" type="logic">
+      <obj_property name="ElementShortName">left_move</obj_property>
+      <obj_property name="ObjectShortName">left_move</obj_property>
+   </wvobject>
+   <wvobject fp_name="/JoyStick_tb/dut/up" type="logic">
+      <obj_property name="ElementShortName">up</obj_property>
+      <obj_property name="ObjectShortName">up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/JoyStick_tb/dut/down" type="logic">
+      <obj_property name="ElementShortName">down</obj_property>
+      <obj_property name="ObjectShortName">down</obj_property>
+   </wvobject>
+   <wvobject fp_name="/JoyStick_tb/dut/spi_s_data_port" type="logic">
+      <obj_property name="ElementShortName">spi_s_data_port</obj_property>
+      <obj_property name="ObjectShortName">spi_s_data_port</obj_property>
+   </wvobject>
+   <wvobject fp_name="/JoyStick_tb/dut/spi_cs_port" type="logic">
+      <obj_property name="ElementShortName">spi_cs_port</obj_property>
+      <obj_property name="ObjectShortName">spi_cs_port</obj_property>
+   </wvobject>
+   <wvobject fp_name="/JoyStick_tb/x_axis" type="array">
+      <obj_property name="ElementShortName">x_axis[9:0]</obj_property>
+      <obj_property name="ObjectShortName">x_axis[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/JoyStick_tb/y_axis" type="array">
+      <obj_property name="ElementShortName">y_axis[9:0]</obj_property>
+      <obj_property name="ObjectShortName">y_axis[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/JoyStick_tb/buttons" type="array">
+      <obj_property name="ElementShortName">buttons[2:0]</obj_property>
+      <obj_property name="ObjectShortName">buttons[2:0]</obj_property>
+   </wvobject>
+</wave_config>

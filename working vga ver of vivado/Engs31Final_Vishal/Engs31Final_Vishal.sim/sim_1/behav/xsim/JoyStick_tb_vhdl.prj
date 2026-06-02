@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Whack-A-Mole/joystick_module.vhd" \
+"../../../../../Whack-A-Mole/joystick_moduletb.vhd" \
+
+# Do not sort compile order
+nosort
