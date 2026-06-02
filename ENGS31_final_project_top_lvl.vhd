@@ -28,7 +28,7 @@ entity Whack_a_mole_top_lvl is
         red                 : out std_logic_vector(3 downto 0);
         green               : out std_logic_vector(3 downto 0);
         blue                : out std_logic_vector(3 downto 0);
-        W
+        
         
         --====================================
         --              JoyStick
@@ -98,6 +98,21 @@ architecture Behavioral of Whack_a_mole_top_lvl  is
         reset_button               : out std_logic;
         whack_button               : out std_logic);
     end component joystick;
+
+    --=========================================================
+    --              System Clock Generator
+    --=========================================================
+    component system_clock_generator is
+        generic(
+            CLOCK_DIVIDER_RATIO : integer := 4
+        );
+        port(
+            input_clk_port : in std_logic;
+            system_clk_port : out std_logic;
+            fwd_clk_port : out std_logic
+        );
+    end component system_clock_generator;
+
     --=======================================================
     -- Internal signals
     --=======================================================
@@ -123,6 +138,7 @@ architecture Behavioral of Whack_a_mole_top_lvl  is
     signal jstk_buttons          :   std_logic_vector(2 downto 0);
     signal jstk_reset_button     :   std_logic;
     signal jstk_whack_button     :   std_logic;
+    signal jstk_sclk             :   std_logic;
 
 
 
@@ -194,4 +210,4 @@ begin
          
          
 
-end Behaioral;
+end Behavioral;
