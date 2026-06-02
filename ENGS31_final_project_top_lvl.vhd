@@ -37,7 +37,7 @@ entity Whack_a_mole_top_lvl is
         jstk_cs             : out std_logic;
         jstk_mosi           : out std_logic ;
         jstk_miso           : in std_logic ;
-        jstk_sclk           : out std_logic 
+        jstk_sclk           : out std_logic ;
         
         --==============
         --add game logic
