@@ -37,7 +37,7 @@ entity Whack_a_mole_top_lvl is
         jstk_cs             : out std_logic;
         jstk_mosi           : out std_logic ;
         jstk_miso           : in std_logic ;
-        jstck_sclk          : out std_logic 
+        jstk_sclk          : out std_logic 
         
         --add game logic
         );
@@ -118,11 +118,11 @@ architecture Behavioral of Whack_a_mole_top_lvl  is
     -- Internal signals
     --=======================================================
     
-    --                    General
+    --                      General
     
     signal system_clk           : std_logic ;
     
-    --                      VGA
+    --                         VGA
     signal pixel_x, pixel_y     : STD_LOGIC_VECTOR(9 downto 0);
     signal video_on             : STD_LOGIC;
     signal color                : STD_LOGIC_VECTOR(11 downto 0);
@@ -139,7 +139,7 @@ architecture Behavioral of Whack_a_mole_top_lvl  is
     signal jstk_buttons          :   std_logic_vector(2 downto 0);
     signal jstk_reset_button     :   std_logic;
     signal jstk_whack_button     :   std_logic;
-    signal jstk_sclk             :   std_logic;
+    signal jstk_sclk_int         :   std_logic;
 
 
 
@@ -196,7 +196,7 @@ begin
         left_move     => jstk_left_move,
         up            => jstk_up,
         down          => jstk_down,
-        spi_sclk_port => jstk_sclk,
+        spi_sclk_port => jstk_sclk_int ,
         button_port   => jstk_buttons,
         reset_button  => jstk_reset_button,
         whack_button  => jstk_whack_button 
@@ -204,7 +204,7 @@ begin
        );
          
        jstk_mosi <= '0'; -- not sending any data to the joystick for now
-       jstk_sclk <= jstk_sclk ;
+       jstk_sclk  <= jstk_sclk_int ;
 
 
          
