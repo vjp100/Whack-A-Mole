@@ -239,7 +239,7 @@ begin
     -----------------------------------------------------
     --              7 seg Module
     -----------------------------------------------------
-    display_value <= "00000" & jstk_x ;     
+    display_value <= "000000" & jstk_x ;     
     uut_sevenseg : seven_seg_driver 
     port map(
         clk_port => system_clk,
