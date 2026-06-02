@@ -116,9 +116,30 @@ architecture Behavioral of Whack_a_mole_top_lvl  is
     
     signal jstk_x                :   std_logic_vector (9 downto 0);
     signal jstk_y                :   std_logic_vector (9 downto 0);
+    signal jstk_right_move       :   std_logic;
+    signal jstk_left_move        :   std_logic;
+    signal jstk_up               :   std_logic;
+    signal jstk_down             :   std_logic;
+    signal jstk_buttons          :   std_logic_vector(2 downto 0);
+    signal jstk_reset_button     :   std_logic;
+    signal jstk_whack_button     :   std_logic;
+
+
+
+
     
 begin
 
+    --               System Clock Generation
+    system_clock_gen: system_clock_generator
+        generic map ( CLOCK_DIVIDER_RATIO => 4) -- divide 100 MHz by 4 to get 25 MHz
+        port map (
+            input_clk_port => clk_ext_port,
+            system_clk_port => system_clk,
+            fwd_clk_port => open
+        );
+
+    --               VGA Syncer
     uut_VGA: VGA
         port map(
             clk => clk_ext_port,
@@ -140,25 +161,30 @@ begin
     green <= color(7 downto 4) when video_on = '1' else "0000";
     blue <= color(3 downto 0) when video_on = '1' else "0000";
 
+    
+    --              Joystick Module
     uut_Joystick: joystick 
     port map (
-        clk_port =>clk_ext_port ,
-        take_sample_port => ,
-        spi_s_data_port => ,
-        spi_cs_port => ,
-        x_axis_port   => ,
-        y_axis_port   => ,
-        right_move    => ,
-        left_move     => ,
-        up            => ,
-        down          => ,
-        spi_sclk_port => ,
-        button_port   => ,
-        reset_button  => ,
-        whack_button  => , 
+        clk_port =>system_clk, 
+        take_sample_port => '1', -- always take samples for now
+        spi_s_data_port => jstk_miso,
+        spi_cs_port => jstk_cs,
+        x_axis_port   => jstk_x,
+        y_axis_port   => jstk_y,
+        right_move    => jstk_right_move,
+        left_move     => jstk_left_move,
+        up            => jstk_up,
+        down          => jstk_down,
+        spi_sclk_port => jstk_sclk,
+        button_port   => jstk_buttons,
+        reset_button  => jstk_reset_button,
+        whack_button  => jstk_whack_button 
        
        );
          
+       jstk_mosi <= '0'; -- not sending any data to the joystick for now
+
+
          
          
          
@@ -168,4 +194,4 @@ begin
          
          
 
-vend Behaioral;
+end Behaioral;
