@@ -145,8 +145,9 @@ architecture Behavioral of Whack_a_mole_top_lvl  is
 
     
 begin
-
+    ---------------------------------------------------------------
     --               System Clock Generation
+    ---------------------------------------------------------------
     system_clock_gen: system_clock_generator
         generic map ( CLOCK_DIVIDER_RATIO => 4) -- divide 100 MHz by 4 to get 25 MHz
         port map (
@@ -154,8 +155,10 @@ begin
             system_clk_port => system_clk,
             fwd_clk_port => open
         );
-
+    
+    ---------------------------------------------------------------
     --               VGA Syncer
+    --------------------------------------------------------------
     uut_VGA: VGA
         port map(
             clk => clk_ext_port,
@@ -177,8 +180,9 @@ begin
     green <= color(7 downto 4) when video_on = '1' else "0000";
     blue <= color(3 downto 0) when video_on = '1' else "0000";
 
-    
+    -----------------------------------------------------
     --              Joystick Module
+    -----------------------------------------------------
     uut_Joystick: joystick 
     port map (
         clk_port =>system_clk, 
