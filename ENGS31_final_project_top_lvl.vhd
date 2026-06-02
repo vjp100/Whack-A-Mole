@@ -34,7 +34,7 @@ entity Whack_a_mole_top_lvl is
         --              JoyStick
         --====================================
         
-        jstk_cs             : in std_logic;
+        jstk_cs             : out std_logic;
         jstk_mosi           : out std_logic ;
         jstk_miso           : in std_logic ;
         jstck_sclk          : out std_logic 
@@ -97,6 +97,7 @@ architecture Behavioral of Whack_a_mole_top_lvl  is
         button_port                : out std_logic_vector(2 downto 0);
         reset_button               : out std_logic;
         whack_button               : out std_logic);
+        
     end component joystick;
 
     --=========================================================
@@ -203,6 +204,7 @@ begin
        );
          
        jstk_mosi <= '0'; -- not sending any data to the joystick for now
+       jstk_sclk <= jstk_sclk ;
 
 
          
