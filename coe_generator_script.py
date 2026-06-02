@@ -1,96 +1,57 @@
-# converts image to Verilog HDL that infers a ROM using Xilinx Block RAM
-# note: 12-bit color map word is r3, r2, r1, r0, g3, g2, g1, g0, b3, b2, b1, b0
-
-from scipy import misc
 import math
+from PIL import Image
 
 
-# returns string of 12-bit color at row x, column y of image
-def get_color_bits(im, y, x):
-    # convert color components to byte string and slice needed upper bits
-    b = format(im[y][x][0], 'b').zfill(8)
-    rx = b[0:4]
-    b = format(im[y][x][1], 'b').zfill(8)
-    gx = b[0:4]
-    b = format(im[y][x][2], 'b').zfill(8)
-    bx = b[0:4]
+def convert_to_4bit(colour):
+    # scaling from 8 bit to 4bit
+    scaled_col = round(colour * (15 / 255))
+    col_4bit = min(max(scaled_col,0),15)
 
-    # return concatination of RGB bits
-    return str(rx + gx + bx)
+    return col_4bit
 
 
-# write to file Verilog HDL
-# takes name of file, image array,
-# pixel coordinates of background color to mask as 0
-def rom_12_bit(name, im, mask=False, rem_x=-1, rem_y=-1):
-    # get colorbyte of background color
-    # if coordinates left at default, map all data without masking
-    if rem_x == -1 or rem_y == -1:
-        a = "000000000000"
+def generate_coe(image_path, output_path, rom_width, rom_height):
+    img = Image.open(image_path)
+    img = img.resize((rom_width, rom_height))
+    img = img.convert('RGB')
 
-    # else set mask compare byte
-    else:
-        a = get_color_bits(im, rem_x, rem_y)
+    pixels = []
+    hex_values = []
 
-    # make output filename from input
-    file_name = name.split('.')[0] + "_12_bit_rom.v"
+    for pixel in img.getdata():
+        pixels.append(pixel)
 
-    # open file
-    f = open(file_name, 'w')
+    for r, g, b in pixels:
+        r_4bit = convert_to_4bit(r)
+        g_4bit = convert_to_4bit(g)
+        b_4bit = convert_to_4bit(b)
 
-    # get image dimensions
-    y_max, x_max, z = im.shape
+        val_12bit = f"{r_4bit:04b}{g_4bit:04b}{b_4bit:04b}"
+        hex_values.append(f"{int(val_12bit, 2):03X}\n")
 
-    # get width of row and column case words
-    row_width = math.ceil(math.log(y_max - 1, 2))
-    col_width = math.ceil(math.log(x_max - 1, 2))
+    # WRITING TO vhdl HEX FILE
 
-    # write beginning part of module up to case statements
-    f.write("module " + name.split('.')[0] + "_rom\n\t(\n\t\t")
-    f.write("input wire clk,\n\t\tinput wire [" + str(row_width - 1) + ":0] row,\n\t\t")
-    f.write("input wire [" + str(col_width - 1) + ":0] col,\n\t\t")
-    f.write("output reg [11:0] color_data\n\t);\n\n\t")
-    f.write("(* rom_style = \"block\" *)\n\n\t//signal declaration\n\t")
-    f.write("reg [" + str(row_width - 1) + ":0] row_reg;\n\t")
-    f.write("reg [" + str(col_width - 1) + ":0] col_reg;\n\n\t")
-    f.write("always @(posedge clk)\n\t\tbegin\n\t\trow_reg <= row;\n\t\tcol_reg <= col;\n\t\tend\n\n\t")
-    f.write("always @*\n\tcase ({row_reg, col_reg})\n")
+    f = open(output_path, 'w')
+    f.write("memory_initialization_radix=16;\n")
+    f.write("memory_initialization_vector=\n")
 
-    # loops through y rows and x columns
-    for y in range(y_max):
-        for x in range(x_max):
-            # write : color_data =
-            case = format(y, 'b').zfill(row_width) + format(x, 'b').zfill(col_width)
-            f.write("\t\t" + str(row_width + col_width) + "'b" + case + ": color_data = " + str(12) + "'b")
+    for value in hex_values[:-1]:
+        f.write(value + ","+"\n")
 
-            # if mask is set to false, just write color data
-            if (mask == False):
-                f.write(get_color_bits(im, y, x))
-                f.write(";\n")
+    f.write(hex_values[-1] + ";"+"\n")
 
-            elif (get_color_bits(im, y, x) != a):
-                # write color bits to file
-                f.write(get_color_bits(im, y, x))
-                f.write(";\n")
-
-            else:
-                f.write("000000000000;\n")
-
-        f.write("\n")
-
-    # write end of module
-    f.write("\t\tdefault: color_data = 12'b000000000000;\n\tendcase\nendmodule")
-
-    # close file
     f.close()
+    print(f"Generated COE file: {output_path}")
+    print(f"Width: {rom_width}, Height: {rom_height}")
+    print(f"Depth: {rom_width * rom_height}")
 
 
-# driver function
-def generate(name, rem_x=-1, rem_y=-1):
-    im = misc.imread(name, mode='RGB')
-    print("width: " + str(im.shape[1]) + ", height: " + str(im.shape[0]))
-    rom_12_bit(name, im)
+# --- Configuration ---
+INPUT_IMAGE = "hole_with_mole.png"
+OUTPUT_COE = "hole_with_mole.coe"
 
+ROM_WIDTH = 160
+ROM_HEIGHT = 160
 
-# generate rom from full bitmap image
-generate("yoshi.bmp")
+if __name__ == "__main__":
+    generate_coe(INPUT_IMAGE, OUTPUT_COE, ROM_WIDTH, ROM_HEIGHT)
