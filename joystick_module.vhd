@@ -19,8 +19,8 @@ use UNISIM.Vcomponents.ALL;
 --Entitity Declarations
 --=============================================================
 entity JoyStick is
-	-- generic(
-	-- 	N_SHIFTS     				: integer);
+	 generic(
+	 	N_SHIFTS     				: integer);
 	port(
 	    --25 MHz serial clock
 		clk_port    				: in  std_logic;	
@@ -80,7 +80,7 @@ signal spi_sclk             : std_logic := '0';
 
 CONSTANT DELAY_COUNT : integer := 375; -- 15us delay at 25MHz clock per spec
 CONSTANT N_BITS      : integer := 8; -- Number of bits to shift in
-CONSTANT N_SHIFTS    : integer := 5; -- Number of shifts to perform (5 bytes)
+--CONSTANT N_SHIFTS    : integer := 5; -- Number of shifts to perform (5 bytes)
 
 
 type state_type is (IDLE, SHIFT, DONE, SS_DELAY, DELAY, PARSE);

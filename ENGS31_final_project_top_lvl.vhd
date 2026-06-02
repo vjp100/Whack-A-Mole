@@ -16,22 +16,38 @@ use UNISIM.Vcomponents.ALL;
 --============================================================
 -- Entity Declaration
 --============================================================
-entity VGA_top_lvl is 
+entity Whack_a_mole_top_lvl is 
     port(
         clk_ext_port        : in  std_logic; --ext 100MHZ clk
+       --======================================
+        --              VGA
+        --=====================================      
         -- test_select         : in  std_logic; -- Selects between game state and test screen
         hsync               : out std_logic;
         vsync               : out std_logic;
         red                 : out std_logic_vector(3 downto 0);
         green               : out std_logic_vector(3 downto 0);
-        blue                : out std_logic_vector(3 downto 0));
+        blue                : out std_logic_vector(3 downto 0);
+        W
         
-     end VGA_top_lvl;
+        --====================================
+        --              JoyStick
+        --====================================
+        
+        jstk_cs             : in std_logic;
+        jstk_mosi           : out std_logic ;
+        jstk_miso           : in std_logic ;
+        jstck_sclk          : out std_logic 
+        
+        --add game logic
+        );
+        
+     end Whack_a_mole_top_lvl ;
 
 --===========================================================
 --Architecture + Component Declarations
 --===========================================================
-architecture Behavioral of VGA_top_lvl is
+architecture Behavioral of Whack_a_mole_top_lvl  is
 
     --======================================================
     --                      VGA SYNCER
@@ -57,14 +73,50 @@ architecture Behavioral of VGA_top_lvl is
             color				: out std_logic_vector(11 downto 0));
 
     end component ;
-
+    
+    --=======================================================
+    --                  JOYSTICK MODULE
+    --=======================================================
+    component joystick is 
+        port(
+            clk_port    				: in  std_logic;	
+    	
+    	--controller signals
+		take_sample_port    		: in  std_logic;	
+		spi_cs_port	    		    : out std_logic;
+        
+        --datapath signals
+		spi_s_data_port	   	       : in  std_logic;	
+        x_axis_port                : out std_logic_vector(9 downto 0);
+        y_axis_port                : out std_logic_vector(9 downto 0);
+        right_move                 : out std_logic;
+        left_move                  : out std_logic;
+        up                         : out std_logic;
+        down                       : out std_logic;
+        spi_sclk_port              : out std_logic;
+        button_port                : out std_logic_vector(2 downto 0);
+        reset_button               : out std_logic;
+        whack_button               : out std_logic);
+    end component joystick;
     --=======================================================
     -- Internal signals
     --=======================================================
+    
+    --                    General
+    
+    signal system_clk           : std_logic ;
+    
+    --                      VGA
     signal pixel_x, pixel_y     : STD_LOGIC_VECTOR(9 downto 0);
     signal video_on             : STD_LOGIC;
     signal color                : STD_LOGIC_VECTOR(11 downto 0);
 
+
+    --                      JoyStick
+    
+    signal jstk_x                :   std_logic_vector (9 downto 0);
+    signal jstk_y                :   std_logic_vector (9 downto 0);
+    
 begin
 
     uut_VGA: VGA
@@ -88,4 +140,32 @@ begin
     green <= color(7 downto 4) when video_on = '1' else "0000";
     blue <= color(3 downto 0) when video_on = '1' else "0000";
 
-end Behavioral;
+    uut_Joystick: joystick 
+    port map (
+        clk_port =>clk_ext_port ,
+        take_sample_port => ,
+        spi_s_data_port => ,
+        spi_cs_port => ,
+        x_axis_port   => ,
+        y_axis_port   => ,
+        right_move    => ,
+        left_move     => ,
+        up            => ,
+        down          => ,
+        spi_sclk_port => ,
+        button_port   => ,
+        reset_button  => ,
+        whack_button  => , 
+       
+       );
+         
+         
+         
+         
+         
+         
+         
+         
+         
+
+vend Behaioral;
