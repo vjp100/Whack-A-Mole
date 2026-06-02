@@ -37,9 +37,21 @@ entity Whack_a_mole_top_lvl is
         jstk_cs             : out std_logic;
         jstk_mosi           : out std_logic ;
         jstk_miso           : in std_logic ;
-        jstk_sclk          : out std_logic 
+        jstk_sclk           : out std_logic 
         
+        --==============
         --add game logic
+        --==============
+        
+        --===================================
+        --             7 seg display
+        --===================================
+        
+        seg                 : out std_logic_vector (6 downto 0);
+        dp                  : out std_logic;
+        an                  : out std_logic_vector(3 downto 0)
+        
+        
         );
         
      end Whack_a_mole_top_lvl ;
@@ -113,6 +125,21 @@ architecture Behavioral of Whack_a_mole_top_lvl  is
             fwd_clk_port : out std_logic
         );
     end component system_clock_generator;
+    
+    --=========================================================
+    --              Seven seg generator
+    --=========================================================
+    
+    component seven_seg_driver is
+        port(
+            clk_port        : in std_logic ;
+            data_port       : in std_logic_vector(15 downto 0);
+            seg_port        : out std_logic_vector(6 downto 0);
+            dp_port         : out std_logic ;
+            an_port         : out std_logic_vector (3 downto 0);
+         );
+     end component seven_seg_driver ;
+     
 
     --=======================================================
     -- Internal signals
@@ -142,7 +169,9 @@ architecture Behavioral of Whack_a_mole_top_lvl  is
     signal jstk_sclk_int         :   std_logic;
 
 
-
+   --                       7 seg display
+   signal display_value          :  std_logic_vector (15 downto 0);
+   
 
     
 begin
@@ -189,7 +218,7 @@ begin
         clk_port =>system_clk, 
         take_sample_port => '1', -- always take samples for now
         spi_s_data_port => jstk_miso,
-        spi_cs_port => jstk_cs,
+        spi_cs_port   => jstk_cs,
         x_axis_port   => jstk_x,
         y_axis_port   => jstk_y,
         right_move    => jstk_right_move,
@@ -207,10 +236,18 @@ begin
        jstk_sclk  <= jstk_sclk_int ;
 
 
-         
-         
-         
-         
+    -----------------------------------------------------
+    --              7 seg Module
+    -----------------------------------------------------
+    display_value <= "00000" & jstk_x ;     
+    uut_sevenseg : seven_seg_driver 
+    port map(
+        clk_port => system_clk,
+        data_port => display_value ,
+        seg_port => seg,
+        dp_port => dp,
+        an_port => an
+        );
          
          
          

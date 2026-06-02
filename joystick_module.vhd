@@ -282,10 +282,10 @@ end process Parse_process;
     x_axis_port <= x_axis_reg;
     y_axis_port <= y_axis_reg;
     button_port <= button_reg;
-    right_move <= '1' when unsigned(x_axis_reg) > unsigned("1001100100") else '0'; -- if x is greater than 612, we're moving right. => implies 100 deadzone (~7.5% of 1023) on either side of the center value of 512.
-    left_move <= '1' when unsigned(x_axis_reg) < unsigned("0110011100") else '0'; -- if x is less than 412, we're moving left.
-    up <= '1' when unsigned(y_axis_reg) > unsigned("1001100100") else '0'; -- if y is greater than 612, we're moving up.
-    down <= '1' when unsigned(y_axis_reg) < unsigned("0110011100") else '0'; -- if y is less than 412, we're moving down.
+    right_move <= '1' when unsigned(x_axis_reg) > 612 else '0'; -- if x is greater than 612, we're moving right. => implies 100 deadzone (~7.5% of 1023) on either side of the center value of 512.
+    left_move <= '1' when unsigned(x_axis_reg) < 412 else '0'; -- if x is less than 412, we're moving left.
+    up <= '1' when unsigned(y_axis_reg) > 612 else '0'; -- if y is greater than 612, we're moving up.
+    down <= '1' when unsigned(y_axis_reg) < 412 else '0'; -- if y is less than 412, we're moving down.
     reset_button <= '1' when button_reg(1) = '1' else '0'; -- if the first button bit is 1, reset button is pressed.
     whack_button <= '1' when button_reg(2) = '1' else '0'; -- if the second button bit is 1, start/stop button is pressed.
 
