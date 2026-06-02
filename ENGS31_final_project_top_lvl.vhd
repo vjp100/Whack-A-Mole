@@ -239,7 +239,17 @@ begin
     -----------------------------------------------------
     --              7 seg Module
     -----------------------------------------------------
-    display_value <= "000000" & jstk_x ;     
+     --scale joystick X (0-1023) -> 0-100, then split into decimal digits 
+     scale_proc: process(jstk_x) 
+         variable x : integer range 0 to 1023; 
+         variable val : integer range 0 to 100;
+         begin 
+            x := to_integer(unsigned(jstk_x)); 
+            val := (x * 100 + 512) / 1024; -- 0 at full left, 100 at full right 
+            display_value <= "0000" & std_logic_vector(to_unsigned( val / 100, 4)) -- hundreds (0 or 1) 
+            & std_logic_vector(to_unsigned((val / 10) mod 10, 4)) -- tens 
+            & std_logic_vector(to_unsigned( val mod 10, 4)); -- ones 
+         end process scale_proc;
     uut_sevenseg : seven_seg_driver 
     port map(
         clk_port => system_clk,

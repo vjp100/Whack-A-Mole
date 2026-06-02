@@ -1,8 +1,11 @@
 # Whack-A-Mole
 Engs 31 final project. Team members: Alisha Qureshi, Mazvita Nhidza, Vishal Powell 
 
-## Update 1/6/26 : 5:34 PM
-Lowk should be close to being done. need to make a testbench to work with the file but it's solid? idk will see. 
+## Update 1/6/26 : 11:56pm
+
+IT WORKSSSS. VGA seems set, so does joystick. Need to make the threshold MUCH larger. like even a slight breeze registers as a movement. Will also try to get an LED to light up when it moves enough to be right or left or whatever i think. 
+
+_Actually, it might be worth doing that before changing threshhold._
 
 ### To DO:
 #### REMOVE `PCLK_CNRT` or `PCLK` and use normal clk for VGA. We're generating a 25mhz clock instead of dividing.
@@ -43,6 +46,9 @@ Cuz it'll be "long to sim with the actual time" or smtn idk
 
 Old Updates:
 ---
+## Update 1/6/26 : 5:34 PM
+Lowk should be close to being done. need to make a testbench to work with the file but it's solid? idk will see. 
+
 ## Update 1/6/26 : 1:46am
 
 Haven't finished coding Joystick module. Need to include registers for x and y (with the parsing of the data to take the 10 bit entry that's split across 16 bits). Need to do math, thinking of potentially having an x shift register (maybe x1, x2) and then anding them into.
