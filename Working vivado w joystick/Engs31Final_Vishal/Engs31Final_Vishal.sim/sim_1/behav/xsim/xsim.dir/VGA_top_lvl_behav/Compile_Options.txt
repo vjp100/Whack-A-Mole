@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "VGA_top_lvl_behav" "xil_defaultlib.VGA_top_lvl" -log "elaborate.log" 

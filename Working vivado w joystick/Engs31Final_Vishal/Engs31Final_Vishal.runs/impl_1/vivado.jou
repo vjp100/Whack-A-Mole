@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Jun  1 23:26:48 2026
+# Process ID: 2084
+# Current directory: O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1
+# Command line: vivado.exe -log Whack_a_mole_top_lvl.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Whack_a_mole_top_lvl.tcl -notrace
+# Log file: O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1/Whack_a_mole_top_lvl.vdi
+# Journal file: O:/CS56/Engs31Final_Vishal/Engs31Final_Vishal.runs/impl_1\vivado.jou
+# Running On: c011-04, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 20, Host memory: 34031 MB
+#-----------------------------------------------------------
+source Whack_a_mole_top_lvl.tcl -notrace

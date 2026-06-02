@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+O:/CS56/Whack-A-Mole/ENGS31_final_project_top_lvl.vhd,1780102019,vhdl,,,,vga_top_lvl,,,,,,,,
+O:/CS56/Whack-A-Mole/VGA_SYNCer.vhd,1780112040,vhdl,,,,vga,,,,,,,,
+O:/CS56/Whack-A-Mole/VGA_SYNCer_tb.vhd,1780102825,vhdl,,,,vga_tb,,,,,,,,
+O:/CS56/Whack-A-Mole/joystick_module.vhd,1780367057,vhdl,O:/CS56/Whack-A-Mole/joystick_moduletb.vhd,,,joystick,,,,,,,,
+O:/CS56/Whack-A-Mole/joystick_moduletb.vhd,1780360727,vhdl,,,,joystick_tb,,,,,,,,
+O:/CS56/Whack-A-Mole/vga_test_pattern_12bit.vhd,1780087274,vhdl,,,,vga_test_pattern,,,,,,,,
