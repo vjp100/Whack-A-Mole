@@ -5,7 +5,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 ENTITY VGA IS
-PORT ( 	clk		:	in	STD_LOGIC; --100 MHz clock
+PORT ( 	clk		:	in	STD_LOGIC; --25 MHz clock
 		V_sync	: 	out	STD_LOGIC;
 		H_sync	: 	out	STD_LOGIC;
         video_on:	out	STD_LOGIC;
@@ -47,44 +47,44 @@ constant v_retrace : integer := 2;--2
 constant VSCAN : integer := top_border + v_display + bottom_border + v_retrace - 1; --number of H_syncs in an V_sync period
 BEGIN
 
-PCLK_toggle_func : process(clk)
-begin
-	if rising_edge(clK) then
-    	if clk_cnt + 1 < 2 then
-			clk_cnt<=clk_cnt+1;
-        else 
-        	clk_cnt<= 0;
-            PCLK_toggle <= not PCLK_toggle;
-        end if;
-    end if;
-end process PCLK_toggle_func;
+--PCLK_toggle_func : process(clk)
+--begin
+--	if rising_edge(clK) then
+--    	if clk_cnt + 1 < 2 then
+--			clk_cnt<=clk_cnt+1;
+--        else 
+--        	clk_cnt<= 0;
+--            PCLK_toggle <= not PCLK_toggle;
+--        end if;
+--    end if;
+--end process PCLK_toggle_func;
 
  
---PCLK Generating Process
-PCLK_proc : process(clk)
-begin
-	if rising_edge(clk) then
-    --put your PCLK generation code here
-    	if PCLK_toggle = '1' then
-        	PCLK <= '1';
-            prevPCLK <= PCLK;
-        else 
-        	PCLK<='0';
-            prevPCLK <= PCLK;
-        end if;
-    end if;
-end process PCLK_proc;
+----PCLK Generating Process
+--PCLK_proc : process(clk)
+--begin
+--	if rising_edge(clk) then
+--    --put your PCLK generation code here
+--    	if PCLK_toggle = '1' then
+--        	PCLK <= '1';
+--            prevPCLK <= PCLK;
+--        else 
+--        	PCLK<='0';
+--            prevPCLK <= PCLK;
+--        end if;
+--    end if;
+--end process PCLK_proc;
 
 PCLK_cnt_func : process(clk)
 begin
 	if rising_edge(clk) then
-        if (PCLK = '1' ) and (clk_cnt = 0) then
+--        if (PCLK = '1' ) and (clk_cnt = 0) then
         	if PCLK_cntr  < HSCAN then
         		PCLK_cntr <= PCLK_cntr + 1;
             else 
                 PCLK_cntr <= 0;
             end if;
-        end if;
+--        end if;
     end if;
 end process PCLK_cnt_func;
 

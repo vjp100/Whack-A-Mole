@@ -29,6 +29,9 @@ set_property PACKAGE_PIN L18 [get_ports {blue[1]}]
 set_property PACKAGE_PIN K18 [get_ports {blue[2]}]
 set_property PACKAGE_PIN J18 [get_ports {blue[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {blue[*]}]
+## For mux switch
+set_property PACKAGE_PIN V17 [get_ports test_select]
+set_property IOSTANDARD LVCMOS33 [get_ports test_select]
 
 set_property -dict {PACKAGE_PIN W7 IOSTANDARD LVCMOS33} [get_ports {seg[0]}]
 set_property -dict {PACKAGE_PIN W6 IOSTANDARD LVCMOS33} [get_ports {seg[1]}]

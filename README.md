@@ -1,19 +1,23 @@
 # Whack-A-Mole
 Engs 31 final project. Team members: Alisha Qureshi, Mazvita Nhidza, Vishal Powell 
 
-## Update 1/6/26 : 11:56pm
+## Update 4/6/26 : 3:50 am
 
-IT WORKSSSS. VGA seems set, so does joystick. Need to make the threshold MUCH larger. like even a slight breeze registers as a movement. Will also try to get an LED to light up when it moves enough to be right or left or whatever i think. 
+*IT WORKS! WE HAVE PLAYED THE GAME*. Actual renderer isn't working so @mazvi10 gotta wake up and fix it lowk.
+RN the joystick is too sensitive (skips the middle boxes) so i need to increase deadzone and decrease sampling rate. I've fixed the clocking for VGA so now everything runs on same clock.
 
-_Actually, it might be worth doing that before changing threshhold._
 
 ### To DO:
-#### REMOVE `PCLK_CNRT` or `PCLK` and use normal clk for VGA. We're generating a 25mhz clock instead of dividing.
+
+* Increase deadzone for movement.
+* Make a take_sample process that takes a sample every half a second or something.
+
+#### ~REMOVE `PCLK_CNRT` or `PCLK` and use normal clk for VGA. We're generating a 25mhz clock instead of dividing.~
 #### NEED to handle MOSI (i think? might be MISO) in top level by tieing them to ground. Also LED bits i think
 * ~I think I'll either finish debouncing and working on joystick logic tonight (probaly not gonna happen lowk) or tomorrow morning. It's SPI and idr how to do that lol.~
 
-* ADD SYSTEM_CLOCK_GENERATOR and tick_generator to vivado project and instanciate the different clocks...?
-* MAke SCKL signal
+* ~ADD SYSTEM_CLOCK_GENERATOR and tick_generator to vivado project and instanciate the different clocks...?~
+* ~MAke SCKL signal~
 * Create a Take sample signal in top lvl that takes a sample every however long (maybe ever ms)
 
 #### For mid sample:
@@ -46,6 +50,12 @@ Cuz it'll be "long to sim with the actual time" or smtn idk
 
 Old Updates:
 ---
+## Update 1/6/26 : 11:56pm
+
+IT WORKSSSS. VGA seems set, so does joystick. Need to make the threshold MUCH larger. like even a slight breeze registers as a movement. Will also try to get an LED to light up when it moves enough to be right or left or whatever i think. 
+
+_Actually, it might be worth doing that before changing threshhold._
+
 ## Update 1/6/26 : 5:34 PM
 Lowk should be close to being done. need to make a testbench to work with the file but it's solid? idk will see. 
 
