@@ -57,8 +57,8 @@ architecture Behavioral of graphic_renderer is
     constant C_BLACK  : std_logic_vector(11 downto 0) := x"000";
 
     -- panel state backgrounds
-    constant C_IDLE   : std_logic_vector(11 downto 0) := x"333";
-    constant C_PLAY   : std_logic_vector(11 downto 0) := x"131";
+    constant C_IDLE   : std_logic_vector(11 downto 0) := x"753";
+    constant C_PLAY   : std_logic_vector(11 downto 0) := x"753";
     constant C_OVER   : std_logic_vector(11 downto 0) := x"411";
 
     -- panel indicator colors
@@ -69,7 +69,12 @@ architecture Behavioral of graphic_renderer is
     constant C_MISSON : std_logic_vector(11 downto 0) := x"F00";
     constant C_SCORE  : std_logic_vector(11 downto 0) := x"0F0";
     constant C_CENTER : std_logic_vector(11 downto 0) := x"777";
-
+    
+    -- start banner
+    constant START_W : integer := 160;
+    constant START_H : integer := 20;
+    constant START_X : integer := 160; -- centered in 480 wide game area
+    constant START_Y : integer := 230; -- centered in 480 tall game area
     -------------------------------------------------------------------------
     -- Pixel coordinate signals
     -------------------------------------------------------------------------
@@ -81,6 +86,12 @@ architecture Behavioral of graphic_renderer is
     -------------------------------------------------------------------------
     -- Game grid/sprite signals
     -------------------------------------------------------------------------
+    signal in_start_banner   : std_logic := '0';
+    signal in_start_banner_d : std_logic := '0';
+
+    signal start_col_int : integer range 0 to 159 := 0;
+    signal start_row_int : integer range 0 to 19 := 0;
+    
     signal sprite_x_int : integer range 0 to 159 := 0;
     signal sprite_y_int : integer range 0 to 159 := 0;
 
@@ -142,6 +153,8 @@ architecture Behavioral of graphic_renderer is
     signal hammer_mole_rgb  : std_logic_vector(11 downto 0);
     signal whack_empty_rgb  : std_logic_vector(11 downto 0);
     signal whack_mole_rgb   : std_logic_vector(11 downto 0);
+    signal startscreen_rgb   : std_logic_vector(11 downto 0);
+    signal gameover_rgb   : std_logic_vector(11 downto 0);
 
     signal grass_rgb        : std_logic_vector(11 downto 0);
     signal chosen_rgb       : std_logic_vector(11 downto 0);
@@ -176,6 +189,16 @@ begin
                      else '0';
 
     -------------------------------------------------------------------------
+-- Start banner area
+-- 160 x 20 image centered in the 480 x 480 game area
+-------------------------------------------------------------------------
+in_start_banner <= '1' when x_int >= START_X and x_int < START_X + START_W and
+                            y_int >= START_Y and y_int < START_Y + START_H
+                   else '0';
+
+start_col_int <= x_int - START_X when in_start_banner = '1' else 0;
+start_row_int <= y_int - START_Y when in_start_banner = '1' else 0;
+    -------------------------------------------------------------------------
     -- Convert pixel position into grid cell and local sprite row/col
     -------------------------------------------------------------------------
     grid_col <= x_int / SPRITE_SIZE when in_game_area = '1' else 0;
@@ -204,6 +227,7 @@ begin
             in_game_area_d  <= in_game_area;
             in_panel_area_d <= in_panel_area;
             video_on_d      <= video_on;
+            in_start_banner_d <= in_start_banner;
 
             current_hole_d       <= current_hole;
             mole_hole_d          <= mole_hole_int;
@@ -294,6 +318,22 @@ begin
             col   => sprite_col_int,
             color => whack_mole_rgb
         );
+        
+--         gameover_inst : entity work.gameover_sprite
+--        port map (
+--            clk   => clk,
+--            row   => sprite_row_int,
+--            col   => sprite_col_int,
+--            color => gameover_rgb
+--        );
+        
+          startscreen_inst : entity work.startscreen_sprite
+        port map (
+            clk   => clk,
+            row   => start_row_int,
+            col   => start_col_int,
+            color => startscreen_rgb
+        );
 
     -------------------------------------------------------------------------
     -- Game sprite priority logic
@@ -306,61 +346,72 @@ begin
     -- 5. mole alone
     -- 6. empty hole
     -------------------------------------------------------------------------
-    process(game_on_d, gameover_d, reset_d, current_hole_d, mole_hole_d,
-            hammer_hole_d, mole_up_d, whacked_d,
-            hit_flash_active_d, hit_flash_hole_d,
-            empty_rgb, mole_rgb, hammer_empty_rgb,
-            hammer_mole_rgb, whack_empty_rgb, whack_mole_rgb)
-    begin
+ process(game_on_d, gameover_d, reset_d,
+        current_hole_d, mole_hole_d,
+        hammer_hole_d, mole_up_d, whacked_d,
+        hit_flash_active_d, hit_flash_hole_d,
+        in_start_banner_d,
+        empty_rgb, mole_rgb, hammer_empty_rgb,
+        hammer_mole_rgb, whack_empty_rgb, whack_mole_rgb,
+        startscreen_rgb)
+begin
+
+    -- DEFAULT
+    chosen_rgb <= empty_rgb;
+
+    -- 0. RESET
+    if reset_d = '1' then
         chosen_rgb <= empty_rgb;
 
-        if reset_d = '1' then
+    -- 1. START SCREEN
+    -- Empty holes in background, 160x20 start banner in the middle
+    elsif game_on_d = '0' and gameover_d = '0' then
+
+        if in_start_banner_d = '1' and startscreen_rgb /= x"000" then
+            chosen_rgb <= startscreen_rgb;
+        else
             chosen_rgb <= empty_rgb;
+        end if;
 
-        elsif game_on_d = '1' and gameover_d = '0' then
+    -- 2. GAME OVER SCREEN
+    -- Shows every hole as a whacked mole by reusing the same sprite.
+    elsif gameover_d = '1' then
+        chosen_rgb <= mole_rgb;
 
-            -- 1. successful whack animation
-            -- This stays visible because hit_flash_active is held by mole_generator.
-            -- It does NOT depend on mole_up anymore.
-            if hit_flash_active_d = '1' and
-               current_hole_d = hit_flash_hole_d then
+    -- 3. GAMEPLAY
+    elsif game_on_d = '1' then
 
-                chosen_rgb <= whack_mole_rgb;
+        if hit_flash_active_d = '1' and
+           current_hole_d = hit_flash_hole_d then
 
-            -- 2. hammer whacking empty hole
-            elsif current_hole_d = hammer_hole_d and
-                  whacked_d = '1' then
+            chosen_rgb <= whack_mole_rgb;
 
-                chosen_rgb <= whack_empty_rgb;
+        elsif current_hole_d = hammer_hole_d and
+              whacked_d = '1' then
 
-            -- 3. hammer hovering over mole
-            elsif current_hole_d = hammer_hole_d and
-                  current_hole_d = mole_hole_d and
-                  mole_up_d = '1' then
+            chosen_rgb <= whack_empty_rgb;
 
-                chosen_rgb <= hammer_mole_rgb;
+        elsif current_hole_d = hammer_hole_d and
+              current_hole_d = mole_hole_d and
+              mole_up_d = '1' then
 
-            -- 4. hammer hovering over empty hole
-            elsif current_hole_d = hammer_hole_d then
+            chosen_rgb <= hammer_mole_rgb;
 
-                chosen_rgb <= hammer_empty_rgb;
+        elsif current_hole_d = hammer_hole_d then
 
-            -- 5. mole alone
-            elsif current_hole_d = mole_hole_d and
-                  mole_up_d = '1' then
+            chosen_rgb <= hammer_empty_rgb;
 
-                chosen_rgb <= mole_rgb;
+        elsif current_hole_d = mole_hole_d and
+              mole_up_d = '1' then
 
-            -- 6. empty hole
-            else
-                chosen_rgb <= empty_rgb;
-            end if;
+            chosen_rgb <= mole_rgb;
 
         else
             chosen_rgb <= empty_rgb;
         end if;
-    end process;
 
+    end if;
+end process;
     -------------------------------------------------------------------------
     -- Right-side diagnostic status panel
     --
@@ -446,30 +497,34 @@ begin
                 col := C_OFF;
             end if;
 
-        ---------------------------------------------------------------------
-        -- Miss boxes
+ ---------------------------------------------------------------------
+        -- Lives / Miss boxes
+        -- Starts full, loses one box with each miss.
         ---------------------------------------------------------------------
         elsif py >= 280 and py < 320 and px >= 10 and px < 50 then
-            if miss_int_d >= 1 then
+            -- Left box: on for 0, 1, or 2 misses
+            if miss_int_d < 3 then
                 col := C_MISSON;
             else
                 col := C_OFF;
             end if;
 
         elsif py >= 280 and py < 320 and px >= 60 and px < 100 then
-            if miss_int_d >= 2 then
+            -- Middle box: on for 0 or 1 miss
+            if miss_int_d < 2 then
                 col := C_MISSON;
             else
                 col := C_OFF;
             end if;
 
         elsif py >= 280 and py < 320 and px >= 110 and px < 150 then
-            if miss_int_d >= 3 then
+            -- Right box: on only when there are 0 misses
+            if miss_int_d < 1 then
                 col := C_MISSON;
             else
                 col := C_OFF;
             end if;
-
+            
         ---------------------------------------------------------------------
         -- Score bar
         ---------------------------------------------------------------------
